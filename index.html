@@ -236,8 +236,11 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-xl border-b border-white/5">
         <div class="flex items-center gap-3">
-            <div class="w-10 h-10 flex items-center justify-center border border-dashed border-white/30 rounded">
-                <span class="text-[8px] text-zinc-500 font-black tracking-widest uppercase">Logo</span>
+            <div class="w-10 h-10 flex items-center justify-center">
+                <svg viewBox="0 0 100 80" class="w-full h-full text-mint" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M25 60 C5 60 5 30 25 30 C45 30 55 60 75 60 C95 60 95 30 75 30 C55 30 45 60 25 60 Z" />
+                    <path d="M50 45 L50 5 M35 20 L50 5 L65 20" />
+                </svg>
             </div>
             <div class="flex flex-col text-mint">
                 <span class="font-black tracking-[0.2em] text-sm leading-none">LIMITLESS</span>
@@ -252,8 +255,12 @@
     <!-- Hero Section -->
     <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-24">
         <div class="mb-10 relative">
-            <div class="w-24 h-24 rounded-full border-2 border-dashed border-mint/40 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md">
-                <span class="text-zinc-500 text-[9px] font-black tracking-widest uppercase text-center">Hero<br/>Logo</span>
+            <div class="w-24 h-24 rounded-full border border-mint/20 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md">
+                <!-- Using a pure SVG recreation of your infinity arrow logo -->
+                <svg viewBox="0 0 100 80" class="w-12 h-12 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.6)]" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M25 60 C5 60 5 30 25 30 C45 30 55 60 75 60 C95 60 95 30 75 30 C55 30 45 60 25 60 Z" />
+                    <path d="M50 45 L50 5 M35 20 L50 5 L65 20" />
+                </svg>
             </div>
         </div>
         <h1 class="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6 max-w-5xl leading-[1.05]">
@@ -301,8 +308,8 @@
                         <p class="text-zinc-200 font-medium italic text-lg leading-relaxed">"The situation hadn’t changed. The calculation had. That wasn’t a mindset shift. It was a miscalibrated equation being corrected."</p>
                     </div>
                 </div>
-                <div class="md:col-span-2 flex flex-col justify-center items-center card-blur border-white/10 min-h-[250px] relative overflow-hidden bg-zinc-900/30 p-2 shadow-lg border-dashed">
-                    <span class="text-zinc-600 text-xs font-black tracking-widest uppercase text-center">Image Placeholder<br/><span class="font-normal text-[10px] mt-2 block">(Ready for upload)</span></span>
+                <div class="md:col-span-2 flex flex-col justify-center items-center card-blur border-white/10 min-h-[250px] relative overflow-hidden bg-zinc-900/30 p-2 shadow-lg">
+                    <img src="/assets/me.JPG" alt="Observation" class="w-full h-full object-cover rounded-2xl opacity-90 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
                 </div>
             </div>
         </section>
@@ -1353,9 +1360,10 @@
     <!-- Footer -->
     <footer class="max-w-4xl mx-auto px-6 py-20 border-t border-white/5 flex flex-col items-center justify-center gap-8">
         <div class="flex flex-col items-center gap-4">
-            <div class="w-12 h-12 border-2 border-dashed border-mint/30 rounded-full flex items-center justify-center">
-                <span class="text-[8px] text-zinc-500 font-black tracking-widest uppercase">Logo</span>
-            </div>
+            <svg viewBox="0 0 100 80" class="w-12 h-12 text-mint" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M25 60 C5 60 5 30 25 30 C45 30 55 60 75 60 C95 60 95 30 75 30 C55 30 45 60 25 60 Z" />
+                <path d="M50 45 L50 5 M35 20 L50 5 L65 20" />
+            </svg>
             <div class="flex flex-col text-center text-mint">
                 <span class="font-black tracking-[0.2em] text-sm leading-none">LIMITLESS</span>
                 <span class="font-medium tracking-[0.2em] text-[10px] leading-none mt-1">POTENTIA</span>
