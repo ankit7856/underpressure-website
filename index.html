@@ -1345,7 +1345,8 @@
             </div>
             
             <div class="flex flex-col items-center gap-6 pt-12">
-                <button data-cal-link="aankitm/30min" data-cal-namespace="30min" data-cal-config='{"layout":"week_view","useSlotsViewOnSmallScreen":"true"}' class="btn-primary px-16 py-6 rounded-full text-lg uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_30px_rgba(152,255,217,0.5)] transition-all">Book a Call</button>
+                <!-- Button now triggers the custom modal -->
+                <button onclick="openCalendarModal()" class="btn-primary px-16 py-6 rounded-full text-lg uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_30px_rgba(152,255,217,0.5)] transition-all">Book a Call</button>
             </div>
         </section>
     </main>
@@ -1353,13 +1354,45 @@
     <!-- Footer -->
     <footer class="max-w-4xl mx-auto px-6 py-20 border-t border-white/5 flex flex-col items-center justify-center gap-8">
         <div class="flex flex-col items-center gap-4">
-            <img src="/assets/logo-small.svg" alt="logo" class="w-12 h-12 text-mint" />
+            <div class="w-12 h-12 border-2 border-dashed border-mint/30 rounded-full flex items-center justify-center">
+                <span class="text-[8px] text-zinc-500 font-black tracking-widest uppercase">Logo</span>
+            </div>
             <div class="flex flex-col text-center text-mint">
                 <span class="font-black tracking-[0.2em] text-sm leading-none">LIMITLESS</span>
                 <span class="font-medium tracking-[0.2em] text-[10px] leading-none mt-1">POTENTIA</span>
             </div>
         </div>
     </footer>
+
+    <!-- Hidden Booking Modal (Wraps your inline code) -->
+    <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-md bg-black/80 px-4">
+        <div class="relative w-full max-w-5xl bg-zinc-950 border border-white/10 rounded-3xl shadow-[0_0_50px_rgba(152,255,217,0.1)] overflow-hidden flex flex-col" style="height: 85vh;">
+            
+            <!-- Close Button -->
+            <button onclick="closeCalendarModal()" class="absolute top-4 right-4 z-50 w-10 h-10 bg-black/50 hover:bg-white/10 border border-white/5 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <!-- Your exact embed code is placed here -->
+            <div class="w-full h-full pt-10 rounded-3xl overflow-hidden">
+                <!-- Cal inline embed code begins -->
+                <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
+                <script type="text/javascript">
+                  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "30min", {origin:"https://app.cal.com"});
+
+                  Cal.ns["30min"]("inline", {
+                    elementOrSelector:"#my-cal-inline-30min",
+                    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+                    calLink: "aankitm/30min",
+                  });
+
+                  Cal.ns["30min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#98FFD9"},"dark":{"cal-brand":"#3c9474"}},"hideEventTypeDetails":false,"layout":"month_view"});
+                  </script>
+                  <!-- Cal inline embed code ends -->
+            </div>
+        </div>
+    </div>
 
     <script>
         const reveal = () => {
@@ -1571,22 +1604,19 @@
                 }, 50);
             }
         };
+
+        // Modal Open/Close Logic
+        window.openCalendarModal = function() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden'; // Prevents scrolling behind the modal
+        };
+
+        window.closeCalendarModal = function() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = ''; // Restores scrolling
+        };
     </script>
-
-    <!-- Cal inline embed code begins -->
-<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "30min", {origin:"https://app.cal.com"});
-
-  Cal.ns["30min"]("inline", {
-    elementOrSelector:"#my-cal-inline-30min",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-    calLink: "aankitm/30min",
-  });
-
-  Cal.ns["30min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#98FFD9"},"dark":{"cal-brand":"#3c9474"}},"hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
-  <!-- Cal inline embed code ends -->
 </body>
 </html>
