@@ -1,12 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limitless Potentia</title>
-    <link href="/assets/styles.css" rel="stylesheet">
+    <title>Limitless Potentia — Recalibrate Your Internal Operating System</title>
+    <meta name="description"
+        content="Limitless Potentia helps senior leaders and high-performers recalibrate the internal mechanism that governs their performance under pressure. Map your system. Reclaim your bandwidth.">
+    <link rel="canonical" href="https://limitlesspotentia.fit/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mint: '#98FFD9',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="./assets/styles.css" rel="stylesheet">
+    <style>
+        /* Landing-specific animations */
+        @keyframes float-up {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float-up-delay-1 {
+
+            0%,
+            15% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float-up-delay-2 {
+
+            0%,
+            30% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float-up-delay-3 {
+
+            0%,
+            45% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse-line {
+
+            0%,
+            100% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .animate-hero-1 {
+            animation: float-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .animate-hero-2 {
+            animation: float-up-delay-1 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .animate-hero-3 {
+            animation: float-up-delay-2 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .animate-hero-4 {
+            animation: float-up-delay-3 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, #98FFD9 0%, #ffffff 50%, #98FFD9 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        .pulse-line-anim {
+            animation: pulse-line 3s ease-in-out infinite;
+        }
+
+        /* Stat counter animation */
+        @keyframes count-pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Horizontal scroll for mobile nav */
+        .nav-links {
+            scrollbar-width: none;
+        }
+
+        .nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
-    <a href="/cost-of-handling-pressure.html" class="px-3 py-2 rounded-md bg-black text-mint">Click Me</a>
+
+<body class="antialiased selection:bg-mint selection:text-black">
+
+    <!-- Moving Ambient Lights -->
+    <div class="glow-bg">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav id="main-nav"
+        class="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+        <a href="./" class="flex items-center gap-3 no-underline">
+            <div class="w-10 h-10 flex items-center justify-center">
+                <img src="./assets/logo-small.svg" alt="Limitless Potentia logo" class="w-full h-full text-mint" />
+            </div>
+            <div class="flex flex-col text-mint">
+                <span class="font-black tracking-[0.2em] text-sm leading-none">LIMITLESS</span>
+                <span class="font-medium tracking-[0.2em] text-[10px] leading-none mt-1">POTENTIA</span>
+            </div>
+        </a>
+        <div class="flex items-center gap-6">
+            <a href="./cost-of-handling-pressure.html"
+                class="hidden sm:inline-block text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-bold transition-colors duration-300">The
+                Mechanism</a>
+            <button onclick="document.getElementById('cta-section').scrollIntoView({behavior:'smooth'})"
+                class="btn-primary px-6 py-2.5 rounded-full text-xs uppercase tracking-widest cursor-pointer">Book a
+                Call</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero"
+        class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-24 pb-20 relative overflow-hidden">
+        <!-- Subtle radial behind hero -->
+        <div
+            class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(152,255,217,0.06)_0%,transparent_70%)] pointer-events-none">
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto">
+            <!-- Badge -->
+            <div class="animate-hero-1 opacity-0 mb-10">
+                <span
+                    class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-mint/20 bg-mint/5 text-mint text-[11px] font-bold tracking-widest uppercase">
+                    <span
+                        class="w-2 h-2 rounded-full bg-mint animate-pulse shadow-[0_0_8px_rgba(152,255,217,0.8)]"></span>
+                    Performance Recalibration for Leaders
+                </span>
+            </div>
+
+            <!-- Heading -->
+            <h1
+                class="animate-hero-2 opacity-0 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-[1.05]">
+                Your System<br />
+                <span class="shimmer-text">Under Pressure</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p
+                class="animate-hero-3 opacity-0 text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-14 font-medium leading-relaxed">
+                The mechanism most senior leaders never see —<br class="hidden sm:block" />
+                <span class="text-white">until it's already compounded.</span>
+            </p>
+
+            <!-- CTA Row -->
+            <div class="animate-hero-4 opacity-0 flex flex-col sm:flex-row gap-5 justify-center items-center">
+                <a href="./cost-of-handling-pressure.html"
+                    class="btn-primary px-12 py-5 rounded-full text-sm uppercase tracking-widest font-black shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_40px_rgba(152,255,217,0.5)] transition-all no-underline">Read
+                    the Mechanism</a>
+                <button onclick="document.getElementById('cta-section').scrollIntoView({behavior:'smooth'})"
+                    class="btn-secondary px-12 py-5 rounded-full text-sm uppercase tracking-widest font-bold cursor-pointer">Book
+                    a Call</button>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div
+            class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-hero-4 opacity-0">
+            <span class="text-zinc-600 text-[10px] uppercase tracking-widest font-bold">Scroll</span>
+            <div class="w-[1px] h-8 bg-gradient-to-b from-zinc-600 to-transparent pulse-line-anim"></div>
+        </div>
+    </section>
+
+    <!-- The Core Premise -->
+    <section id="premise" class="max-w-4xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-5 gap-12 items-center">
+            <div class="md:col-span-3 space-y-8">
+                <span class="section-tag">The Premise</span>
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight">
+                    You handle pressure well.<br />
+                    <span class="text-mint italic">Here's what it's costing you.</span>
+                </h2>
+                <div class="space-y-5 text-zinc-400 leading-relaxed">
+                    <p>Most people fold under the conditions you operate in daily. You don't. You've built a career on
+                        staying functional when the stakes are high.</p>
+                    <p>But the question isn't whether you can handle it. The question is <span
+                            class="text-white font-bold">what handling it this way is actually costing you.</span></p>
+                </div>
+                <a href="./cost-of-handling-pressure.html"
+                    class="inline-flex items-center gap-3 text-mint font-bold text-sm uppercase tracking-widest hover:gap-5 transition-all duration-300 no-underline group">
+                    Read the full mechanism
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="md:col-span-2 card-blur border-white/10 p-2 shadow-lg relative overflow-hidden">
+                <img src="./assets/me.jpg" alt="Ankit — Founder of Limitless Potentia"
+                    class="w-full h-full object-cover rounded-2xl opacity-90 shadow-[0_0_30px_rgba(255,255,255,0.05)]"
+                    loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- The Equation -->
+    <section id="equation" class="max-w-4xl mx-auto px-6 py-24">
+        <span class="section-tag">The Equation</span>
+        <h2 class="text-3xl md:text-4xl font-black mb-12 tracking-tight">
+            It's Not About How Hard It Is.<br />
+            <span class="text-zinc-500">It's About How Your Brain Calculated It.</span>
+        </h2>
+
+        <div class="p-10 md:p-14 card-blur text-center space-y-6">
+            <div class="text-5xl md:text-7xl font-black tracking-tighter text-white">PT <span
+                    class="text-zinc-700">vs.</span> PR</div>
+            <p class="text-zinc-500 uppercase tracking-[0.3em] font-bold text-xs">Perceived Threat vs. Perceived
+                Resources</p>
+            <div class="grid md:grid-cols-2 gap-8 pt-10 text-left">
+                <div class="space-y-3">
+                    <div class="text-mint font-bold">If PR > PT (Resources exceed threat):</div>
+                    <p class="text-zinc-400 text-sm">Challenge zone. Clean mobilisation. Focused, sharp, decisive.</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="text-red-400 font-bold">If PT > PR (Threat exceeds resources):</div>
+                    <p class="text-zinc-400 text-sm">Protection mode. System reprioritises from optimal performance to
+                        survival.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 p-6 bg-white/5 rounded-2xl border border-white/10">
+            <p class="text-sm italic text-zinc-400">The stress response doesn't trigger because a situation is
+                objectively hard. It triggers when your brain calculates that <span class="text-white font-bold">demand
+                    exceeds your perceived control</span>.</p>
+        </div>
+    </section>
+
+    <!-- The Three Zones -->
+    <section id="zones" class="max-w-5xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <span class="section-tag">The Three Zones</span>
+            <h2 class="text-3xl md:text-4xl font-black tracking-tight">Where Your System Operates</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Underload -->
+            <div class="p-8 card-blur border-blue-500/20 hover:border-blue-500/40 transition-colors duration-300 group">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-3 h-3 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.5)]"></div>
+                    <div class="text-blue-400 font-black tracking-widest uppercase text-xs">Underload</div>
+                </div>
+                <div
+                    class="px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold tracking-widest inline-block mb-5">
+                    PR >> PT</div>
+                <p class="text-zinc-400 text-sm leading-relaxed mb-4">Resources far exceed demand. System feels flat,
+                    under-stimulated.</p>
+                <p class="text-blue-400 text-xs font-bold">Where your brain is most creative.</p>
+            </div>
+
+            <!-- Challenge Zone -->
+            <div
+                class="p-8 card-blur border-mint/30 bg-mint/5 shadow-[0_0_30px_rgba(152,255,217,0.08)] relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-br from-mint/5 to-transparent pointer-events-none"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-3 h-3 rounded-full bg-mint shadow-[0_0_10px_rgba(152,255,217,0.8)]"></div>
+                        <div class="text-mint font-black tracking-widest uppercase text-xs">Challenge Zone</div>
+                    </div>
+                    <div
+                        class="px-3 py-1.5 rounded-full bg-mint/10 text-mint text-[10px] font-bold tracking-widest inline-block mb-5">
+                        PR ≈ PT</div>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-4">High demand, stable perception. The nervous
+                        system mobilises fully.</p>
+                    <p class="text-mint text-xs font-bold">Where your brain is most competitive.</p>
+                </div>
+            </div>
+
+            <!-- Overload -->
+            <div class="p-8 card-blur border-red-500/20 hover:border-red-500/40 transition-colors duration-300 group">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
+                    <div class="text-red-500 font-black tracking-widest uppercase text-xs">Overload / Protection</div>
+                </div>
+                <div
+                    class="px-3 py-1.5 rounded-full bg-red-500/10 text-red-500 text-[10px] font-bold tracking-widest inline-block mb-5">
+                    PT > PR</div>
+                <p class="text-zinc-400 text-sm leading-relaxed mb-4">The system shifts priority from the task to
+                    personal protection.</p>
+                <p class="text-red-400 text-xs font-bold">Where all internal friction lives.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="./cost-of-handling-pressure.html#zone-scroll-container"
+                class="inline-flex items-center gap-3 text-zinc-400 hover:text-mint font-bold text-sm uppercase tracking-widest transition-colors duration-300 no-underline group">
+                Explore zones in depth
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- The Compound Cost -->
+    <section id="compound" class="max-w-4xl mx-auto px-6 py-24">
+        <span class="section-tag">The Compound Cost</span>
+        <h2 class="text-3xl md:text-4xl font-black mb-6 tracking-tight">Pushing Through Works.<br /><span
+                class="text-zinc-500">Until It Stops.</span></h2>
+        <p class="text-zinc-400 text-lg mb-16 max-w-2xl">Running a costly pattern for long enough, you stop feeling it
+            as costly. You just call it normal. But normalised doesn't mean free.</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="p-8 card-blur space-y-4 hover:border-white/10 transition-colors duration-300">
+                <div
+                    class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
+                    <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h4 class="text-sm font-black text-white uppercase">Metabolically Expensive</h4>
+                <p class="text-zinc-400 text-sm leading-relaxed">Willpower and cognitive bandwidth are finite resources.
+                    Every time you override friction with discipline, you spend from a limited account.</p>
+            </div>
+            <div class="p-8 card-blur space-y-4 hover:border-white/10 transition-colors duration-300">
+                <div
+                    class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20">
+                    <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h4 class="text-sm font-black text-white uppercase">Structural Degradation</h4>
+                <p class="text-zinc-400 text-sm leading-relaxed">Chronic stress causes measurable <span
+                        class="text-red-400 font-bold">loss of connections in the prefrontal cortex</span> — the region
+                    governing strategic thinking.</p>
+            </div>
+            <div class="p-8 card-blur space-y-4 hover:border-white/10 transition-colors duration-300">
+                <div
+                    class="w-10 h-10 rounded-xl bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20">
+                    <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                        </path>
+                    </svg>
+                </div>
+                <h4 class="text-sm font-black text-white uppercase">Decision Quality Shift</h4>
+                <p class="text-zinc-400 text-sm leading-relaxed">Under protection mode, your brain prefers certainty
+                    over upside, defaults to proven patterns over optimal solutions.</p>
+            </div>
+            <div class="p-8 card-blur space-y-4 hover:border-white/10 transition-colors duration-300">
+                <div
+                    class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
+                    <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                        </path>
+                    </svg>
+                </div>
+                <h4 class="text-sm font-black text-white uppercase">The Reinforcing Loop</h4>
+                <p class="text-zinc-400 text-sm leading-relaxed">Eventually, it learns: <span
+                        class="text-white italic">no pressure = no ignition</span>. You need escalating stakes just to
+                    mobilise.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section id="solution" class="max-w-4xl mx-auto px-6 py-24">
+        <span class="section-tag">The Solution</span>
+        <h2 class="text-3xl md:text-4xl font-black mb-6 tracking-tight">Map It. See It. Replace It.</h2>
+        <p class="text-zinc-400 text-lg mb-16 max-w-2xl">You don't need another protocol. You need to understand the
+            mechanism that's been running you under pressure — and recalibrate the calculation at the source.</p>
+
+        <div
+            class="p-8 md:p-12 bg-mint/5 border border-mint/20 rounded-[40px] shadow-[0_0_30px_rgba(152,255,217,0.05)]">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black text-sm">
+                        01</div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Map the Trigger</h4>
+                    <p class="text-zinc-500 text-xs leading-relaxed">What specifically fires the protection response in
+                        you.</p>
+                </div>
+                <div class="space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black text-sm">
+                        02</div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Map the Pattern</h4>
+                    <p class="text-zinc-500 text-xs leading-relaxed">What the system does when that trigger fires.</p>
+                </div>
+                <div class="space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black text-sm">
+                        03</div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Map the Cost</h4>
+                    <p class="text-zinc-500 text-xs leading-relaxed">What it consumes, what it blocks, what it delays.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black text-sm shadow-[0_0_15px_rgba(152,255,217,0.5)]">
+                        04</div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Replace the Pattern</h4>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Install one that doesn't split your bandwidth.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="./cost-of-handling-pressure.html"
+                class="inline-flex items-center gap-3 text-mint font-bold text-sm uppercase tracking-widest hover:gap-5 transition-all duration-300 no-underline group">
+                Read the full mechanism — understand how your system works
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Observation -->
+    <section class="max-w-4xl mx-auto px-6 py-8">
+        <div class="relative p-8 md:p-12 rounded-[32px] border border-dashed border-zinc-600 bg-zinc-900/20">
+            <div
+                class="absolute -top-3 left-8 bg-[#050505] px-4 text-[10px] font-black tracking-widest text-zinc-500 uppercase flex items-center gap-2 border border-zinc-800 rounded-full py-1">
+                <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                </svg>
+                Observation
+            </div>
+            <div class="space-y-5 text-center max-w-2xl mx-auto pt-4">
+                <p class="text-xl md:text-2xl font-bold text-white leading-relaxed">
+                    "The situation hadn't changed. The calculation had."
+                </p>
+                <p class="text-zinc-400 leading-relaxed">
+                    That wasn't a mindset shift. It was a miscalibrated equation being corrected. Every leader, athlete,
+                    high-performer is limited by the same thing: <span class="text-mint font-bold">their own
+                        system.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta-section" class="max-w-4xl mx-auto px-6 py-32 text-center">
+        <h2 class="text-4xl md:text-6xl font-black leading-tight mb-8">
+            Ready to Map<br />
+            <span class="text-mint">Your System?</span>
+        </h2>
+
+        <p class="text-zinc-400 text-lg max-w-xl mx-auto mb-6 leading-relaxed">
+            In one conversation, we'll map your specific triggers, identify which zone you're spending most of your time
+            in, and pinpoint exactly where the bandwidth is leaking.
+        </p>
+
+        <p
+            class="text-mint font-black tracking-[0.2em] uppercase text-sm md:text-base mb-12 drop-shadow-[0_0_15px_rgba(152,255,217,0.4)]">
+            Your Data. Your System. Your Map.</p>
+
+        <div class="flex flex-col items-center gap-6">
+            <button data-cal-link="aankitm/15mins" data-cal-namespace="15mins"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                class="btn-primary px-16 py-6 rounded-full text-lg uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_40px_rgba(152,255,217,0.5)] transition-all cursor-pointer">Book
+                a Call</button>
+            <span class="text-zinc-600 text-xs uppercase tracking-widest font-bold">15-minute discovery call • No
+                commitment</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="max-w-4xl mx-auto px-6 py-20 border-t border-white/5 flex flex-col items-center justify-center gap-8">
+        <div class="flex flex-col items-center gap-4">
+            <a href="./" class="no-underline">
+                <div
+                    class="w-24 h-24 rounded-full border border-mint/20 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md">
+                    <img src="./assets/logo-small.svg" alt="Limitless Potentia logo"
+                        class="w-12 h-12 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.6)]">
+                </div>
+            </a>
+            <div class="flex flex-col text-center text-mint">
+                <span class="font-black tracking-[0.2em] text-sm leading-none">LIMITLESS</span>
+                <span class="font-medium tracking-[0.2em] text-[10px] leading-none mt-1">POTENTIA</span>
+            </div>
+        </div>
+        <div class="flex items-center gap-6 text-zinc-600 text-xs uppercase tracking-widest font-bold">
+            <a href="./" class="hover:text-zinc-400 transition-colors no-underline text-zinc-600">Home</a>
+            <span class="text-zinc-800">•</span>
+            <a href="./cost-of-handling-pressure.html"
+                class="hover:text-zinc-400 transition-colors no-underline text-zinc-600">The Mechanism</a>
+        </div>
+    </footer>
+
+    <!-- Scroll reveal animation -->
+    <script>
+        const reveal = () => {
+            const reveals = document.querySelectorAll('#premise, #equation, #zones, #compound, #solution, #cta-section, .card-blur');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 80;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('opacity-100', 'translate-y-0');
+                    reveals[i].classList.remove('opacity-0', 'translate-y-10');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', reveal);
+
+        // Apply initial hidden state to scroll-reveal sections
+        document.querySelectorAll('#premise, #equation, #zones, #compound, #solution, #cta-section').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
+        });
+
+        reveal();
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-black/60');
+            } else {
+                nav.classList.remove('bg-black/60');
+            }
+        });
+    </script>
+
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "15mins", { origin: "https://app.cal.com" });
+        Cal.ns["15mins"]("ui", { "cssVarsPerTheme": { "light": { "cal-brand": "#98FFD9" }, "dark": { "cal-brand": "#75edc1" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+    </script>
+    <!-- Cal element-click embed code ends -->
+
 </body>
+
 </html>

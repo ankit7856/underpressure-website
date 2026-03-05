@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,71 +17,90 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="/assets/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="./assets/styles.css" rel="stylesheet">
 </head>
+
 <body class="antialiased selection:bg-mint selection:text-black">
-    
+
     <!-- Moving Ambient Lights -->
     <div class="glow-bg">
         <div class="glow-orb orb-1"></div>
         <div class="glow-orb orb-2"></div>
         <div class="glow-orb orb-3"></div>
     </div>
-    
+
     <!-- Grain Overlay -->
     <div class="grain-overlay"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-xl border-b border-white/5">
-        <div class="flex items-center gap-3">
+    <nav
+        class="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-xl border-b border-white/5">
+        <a href="./" class="flex items-center gap-3 no-underline">
             <div class="w-10 h-10 flex items-center justify-center">
-                <img src="/assets/logo-small.svg" alt="logo" class="w-full h-full text-mint" />
+                <img src="./assets/logo-small.svg" alt="Limitless Potentia logo" class="w-full h-full text-mint" />
             </div>
             <div class="flex flex-col text-mint">
                 <span class="font-black tracking-[0.2em] text-sm leading-none">LIMITLESS</span>
                 <span class="font-medium tracking-[0.2em] text-[10px] leading-none mt-1">POTENTIA</span>
             </div>
-        </div>
-        <div class="flex items-center gap-4">
-            <button onclick="document.getElementById('contact').scrollIntoView()" class="btn-primary px-6 py-2.5 rounded-full text-xs uppercase tracking-widest">Get Your Map</button>
+        </a>
+        <div class="flex items-center gap-6">
+            <a href="./"
+                class="hidden sm:inline-block text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-bold transition-colors duration-300 no-underline">Home</a>
+            <span
+                class="hidden sm:inline-block text-mint text-xs uppercase tracking-widest font-black border-b border-mint/30 pb-0.5">The
+                Mechanism</span>
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+                class="btn-primary px-6 py-2.5 rounded-full text-xs uppercase tracking-widest cursor-pointer">Get Your
+                Map</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-24">
         <div class="mb-10 relative">
-            <div class="w-24 h-24 rounded-full border border-mint/20 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md">
-                <img src="/assets/logo-small.svg" alt="logo" class="w-12 h-12 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.6)]" />
+            <div
+                class="w-24 h-24 rounded-full border border-mint/20 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md">
+                <img src="./assets/logo-small.svg" alt="Limitless Potentia logo"
+                    class="w-12 h-12 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.6)]" />
             </div>
         </div>
         <h1 class="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6 max-w-5xl leading-[1.05]">
-            You Handle Pressure Well.<br/>
+            You Handle Pressure Well.<br />
             <span class="text-mint italic">Here's What It's Costing You.</span>
         </h1>
         <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mb-12 font-medium leading-relaxed">
             The mechanism most senior leaders never see — <span class="text-white">until it's already compounded.</span>
         </p>
         <div class="flex flex-col sm:flex-row gap-5">
-            <button onclick="document.getElementById('contact').scrollIntoView()" class="btn-primary px-12 py-5 rounded-full text-sm uppercase tracking-widest font-black shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_30px_rgba(152,255,217,0.5)] transition-all">Get your map</button>
+            <button onclick="document.getElementById('contact').scrollIntoView()"
+                class="btn-primary px-12 py-5 rounded-full text-sm uppercase tracking-widest font-black shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_30px_rgba(152,255,217,0.5)] transition-all">Get
+                your map</button>
         </div>
     </section>
 
     <!-- Main Content Container -->
     <main id="document-start" class="max-w-4xl mx-auto px-6 py-20">
-        
+
         <!-- Opening Narrative -->
         <article class="space-y-10 mb-32">
             <div class="space-y-8 text-zinc-300 text-xl leading-[1.6]">
                 <p class="font-semibold text-white">You handle pressure well.</p>
                 <p>You always have. That’s not in question — it’s literally why you’re where you are.</p>
-                <p>Most people fold under the conditions you operate in daily. You don’t. You’ve built a career on staying functional when the stakes are high.</p>
+                <p>Most people fold under the conditions you operate in daily. You don’t. You’ve built a career on
+                    staying functional when the stakes are high.</p>
                 <p class="text-white font-medium">But the question isn’t whether you can handle it.</p>
-                
-                <div class="mt-8 max-w-2xl mx-auto p-6 md:p-8 bg-red-500/5 rounded-2xl border border-red-500/30 shadow-[0_0_30px_rgba(255,77,77,0.15)] relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50"></div>
+
+                <div
+                    class="mt-8 max-w-2xl mx-auto p-6 md:p-8 bg-red-500/5 rounded-2xl border border-red-500/30 shadow-[0_0_30px_rgba(255,77,77,0.15)] relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50">
+                    </div>
                     <p class="text-lg md:text-xl text-white font-black leading-tight text-center">
-                        The question is what handling it this way is <span class="text-red-400">actually costing you.</span>
+                        The question is what handling it this way is <span class="text-red-400">actually costing
+                            you.</span>
                     </p>
                 </div>
             </div>
@@ -91,16 +111,24 @@
             <span class="section-tag">Before you begin</span>
             <div class="grid md:grid-cols-5 gap-12">
                 <div class="md:col-span-3 space-y-6 text-zinc-400 leading-relaxed">
-                    <p>A year ago, I had everything a coach is supposed to have - clients, credibility, and an identity built around not cracking under pressure.</p>
-                    <p>Then everything collapsed at once. Lost £30k. Lost the relationship. Had to ask my father for money - the one thing I’d sworn I’d never do.</p>
-                    <p>And I did what I’d always done: <span class="text-white font-bold italic">pushed harder.</span></p>
-                    <p>It didn’t work. The harder I pushed, the louder it got. One night, I stopped and asked a question I hadn’t asked once: <span class="text-white">Why am I fighting with myself?</span></p>
+                    <p>A year ago, I had everything a coach is supposed to have - clients, credibility, and an identity
+                        built around not cracking under pressure.</p>
+                    <p>Then everything collapsed at once. Lost £30k. Lost the relationship. Had to ask my father for
+                        money - the one thing I’d sworn I’d never do.</p>
+                    <p>And I did what I’d always done: <span class="text-white font-bold italic">pushed harder.</span>
+                    </p>
+                    <p>It didn’t work. The harder I pushed, the louder it got. One night, I stopped and asked a question
+                        I hadn’t asked once: <span class="text-white">Why am I fighting with myself?</span></p>
                     <div class="pt-4 border-t border-white/5">
-                        <p class="text-zinc-200 font-medium italic text-lg leading-relaxed">"The situation hadn’t changed. The calculation had. That wasn’t a mindset shift. It was a miscalibrated equation being corrected."</p>
+                        <p class="text-zinc-200 font-medium italic text-lg leading-relaxed">"The situation hadn’t
+                            changed. The calculation had. That wasn’t a mindset shift. It was a miscalibrated equation
+                            being corrected."</p>
                     </div>
                 </div>
-                <div class="md:col-span-2 flex flex-col justify-center items-center card-blur border-white/10 min-h-[250px] relative overflow-hidden bg-zinc-900/30 p-2 shadow-lg">
-                    <img src="/assets/me.jpg" alt="Observation" class="w-full h-full object-cover rounded-2xl opacity-90 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+                <div
+                    class="md:col-span-2 flex flex-col justify-center items-center card-blur border-white/10 min-h-[250px] relative overflow-hidden bg-zinc-900/30 p-2 shadow-lg">
+                    <img src="./assets/me.jpg" alt="Ankit — Founder of Limitless Potentia"
+                        class="w-full h-full object-cover rounded-2xl opacity-90 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
                 </div>
             </div>
         </section>
@@ -110,74 +138,94 @@
             <div>
                 <span class="section-tag">Part 1</span>
                 <h2 class="text-4xl font-black mb-6">The Equation Your Brain Runs on Every Decision</h2>
-                <p class="text-zinc-400 text-lg">Your brain is not primarily a thinking machine. It's a <span class="text-mint font-bold">prediction machine</span>.</p>
+                <p class="text-zinc-400 text-lg">Your brain is not primarily a thinking machine. It's a <span
+                        class="text-mint font-bold">prediction machine</span>.</p>
             </div>
 
             <div class="space-y-8 text-zinc-300 text-lg leading-relaxed">
-                <p>Every time you face a situation - a board meeting, a difficult hire, a market shift - before you consciously process anything, your brain runs a fast calculation:</p>
+                <p>Every time you face a situation - a board meeting, a difficult hire, a market shift - before you
+                    consciously process anything, your brain runs a fast calculation:</p>
             </div>
 
             <!-- Flowchart -->
             <div class="py-10 max-w-4xl mx-auto">
                 <div class="relative card-blur p-6 md:p-12 border-white/5 overflow-hidden">
                     <div class="flex flex-col items-center pb-8">
-                        <div class="text-mint font-black tracking-widest text-xs uppercase mb-8">How Your Brain Decides: Threat vs Challenge</div>
-                        
+                        <div class="text-mint font-black tracking-widest text-xs uppercase mb-8">How Your Brain Decides:
+                            Threat vs Challenge</div>
+
                         <div class="chart-box w-full max-w-xs">
                             SITUATION OCCURS
-                            <div class="text-[10px] text-zinc-500 font-normal">Quarterly miss, team conflict, market crash</div>
+                            <div class="text-[10px] text-zinc-500 font-normal">Quarterly miss, team conflict, market
+                                crash</div>
                         </div>
-                        
-                        <div class="connector"></div><div class="arrow-head"></div>
-                        
+
+                        <div class="connector"></div>
+                        <div class="arrow-head"></div>
+
                         <div class="chart-box w-full max-w-xs">
                             APPRAISAL SYSTEM ACTIVATES
                         </div>
-                        
-                        <div class="connector"></div><div class="arrow-head"></div>
-                        
+
+                        <div class="connector"></div>
+                        <div class="arrow-head"></div>
+
                         <div class="relative w-full flex flex-col items-center max-w-lg mx-auto">
                             <div class="chart-box w-[200px] md:w-full max-w-xs relative">
                                 PRIMARY APPRAISAL
-                                <div class="text-[10px] text-zinc-400 font-normal italic">"Does this matter to me?"</div>
-                                
+                                <div class="text-[10px] text-zinc-400 font-normal italic">"Does this matter to me?"
+                                </div>
+
                                 <!-- Side Exit for NO -->
                                 <div class="absolute top-1/2 left-full -translate-y-1/2 flex items-center z-10">
                                     <div class="w-6 md:w-12 h-[2px] bg-white/10"></div>
-                                    <div class="text-[9px] md:text-[10px] text-zinc-500 px-1.5 font-bold tracking-widest">NO</div>
-                                    <div class="chart-box opacity-60 text-[9px] md:text-[10px] text-left whitespace-nowrap p-2 ml-1">NO STRESS<br/><span class="font-normal text-zinc-400">(Irrelevant)</span></div>
+                                    <div
+                                        class="text-[9px] md:text-[10px] text-zinc-500 px-1.5 font-bold tracking-widest">
+                                        NO</div>
+                                    <div
+                                        class="chart-box opacity-60 text-[9px] md:text-[10px] text-left whitespace-nowrap p-2 ml-1">
+                                        NO STRESS<br /><span class="font-normal text-zinc-400">(Irrelevant)</span></div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="connector"></div><div class="text-[10px] text-mint font-bold py-1">YES</div><div class="arrow-head"></div>
-                        
+
+                        <div class="connector"></div>
+                        <div class="text-[10px] text-mint font-bold py-1">YES</div>
+                        <div class="arrow-head"></div>
+
                         <div class="chart-box w-[200px] md:w-full max-w-xs border-mint/40">
                             SECONDARY APPRAISAL
-                            <div class="text-[10px] text-zinc-400 font-normal italic">"Do I have resources to handle it?"</div>
+                            <div class="text-[10px] text-zinc-400 font-normal italic">"Do I have resources to handle
+                                it?"</div>
                         </div>
-                        
+
                         <!-- The Fork Connecting Lines -->
                         <div class="w-[2px] h-4 bg-white/10 mx-auto"></div>
-                        
+
                         <!-- The Fork Content -->
                         <div class="w-full grid grid-cols-2 gap-4 md:gap-12 mt-0 relative">
 
                             <!-- Red Branch -->
                             <div class="flex flex-col items-center relative">
                                 <!-- Horizontal connector -->
-                                <div class="absolute right-[-0.5rem] md:right-[-1.5rem] top-0 w-[calc(50%+0.5rem)] md:w-[calc(50%+1.5rem)] h-[2px] bg-white/10"></div>
+                                <div
+                                    class="absolute right-[-0.5rem] md:right-[-1.5rem] top-0 w-[calc(50%+0.5rem)] md:w-[calc(50%+1.5rem)] h-[2px] bg-white/10">
+                                </div>
                                 <!-- Vertical connector & Label -->
                                 <div class="flex flex-col items-center w-full relative">
                                     <div class="w-[2px] h-8 bg-white/10 relative">
-                                        <div class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-red-500 font-bold uppercase">No</div>
+                                        <div
+                                            class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-red-500 font-bold uppercase">
+                                            No</div>
                                     </div>
                                     <div class="arrow-head -mt-[1px] mb-2"></div>
                                 </div>
                                 <div class="chart-box glow-red text-red-500 w-full uppercase">Threat Response</div>
                                 <div class="connector bg-red-500/30"></div>
                                 <div class="biology-card red w-full space-y-3">
-                                    <div class="text-center font-bold text-xs uppercase text-red-500 underline decoration-red-500/30 underline-offset-4">Biology B</div>
+                                    <div
+                                        class="text-center font-bold text-xs uppercase text-red-500 underline decoration-red-500/30 underline-offset-4">
+                                        Biology B</div>
                                     <ul class="text-[10px] text-zinc-400 space-y-2 list-disc pl-4 text-left">
                                         <li>Amygdala hijacks</li>
                                         <li>Cortisol = poison</li>
@@ -189,26 +237,33 @@
                                 <div class="connector bg-red-500/30"></div>
                                 <div class="chart-box border-red-500/30 text-[10px] uppercase">Survival Mindset</div>
                                 <div class="connector bg-red-500/30"></div>
-                                <div class="text-[10px] text-zinc-500 italic p-3 border border-red-500/20 rounded-lg text-center w-full max-w-[160px]">
-                                    Reinforces:<br/>"I can't handle this"
+                                <div
+                                    class="text-[10px] text-zinc-500 italic p-3 border border-red-500/20 rounded-lg text-center w-full max-w-[160px]">
+                                    Reinforces:<br />"I can't handle this"
                                 </div>
                             </div>
 
                             <!-- Mint Branch -->
                             <div class="flex flex-col items-center relative">
                                 <!-- Horizontal connector -->
-                                <div class="absolute left-[-0.5rem] md:left-[-1.5rem] top-0 w-[calc(50%+0.5rem)] md:w-[calc(50%+1.5rem)] h-[2px] bg-white/10"></div>
+                                <div
+                                    class="absolute left-[-0.5rem] md:left-[-1.5rem] top-0 w-[calc(50%+0.5rem)] md:w-[calc(50%+1.5rem)] h-[2px] bg-white/10">
+                                </div>
                                 <!-- Vertical connector & Label -->
                                 <div class="flex flex-col items-center w-full relative">
                                     <div class="w-[2px] h-8 bg-white/10 relative">
-                                        <div class="absolute left-3 top-1/2 -translate-y-1/2 text-[10px] text-mint font-bold uppercase">Yes</div>
+                                        <div
+                                            class="absolute left-3 top-1/2 -translate-y-1/2 text-[10px] text-mint font-bold uppercase">
+                                            Yes</div>
                                     </div>
                                     <div class="arrow-head -mt-[1px] mb-2"></div>
                                 </div>
                                 <div class="chart-box glow-mint text-mint w-full uppercase">Challenge Response</div>
                                 <div class="connector bg-mint/30"></div>
                                 <div class="biology-card mint w-full space-y-3">
-                                    <div class="text-center font-bold text-xs uppercase text-mint underline decoration-mint/30 underline-offset-4">Biology A</div>
+                                    <div
+                                        class="text-center font-bold text-xs uppercase text-mint underline decoration-mint/30 underline-offset-4">
+                                        Biology A</div>
                                     <ul class="text-[10px] text-zinc-400 space-y-2 list-disc pl-4 text-left">
                                         <li>Prefrontal cortex in control</li>
                                         <li>Cortisol = fuel</li>
@@ -218,15 +273,18 @@
                                     </ul>
                                 </div>
                                 <div class="connector bg-mint/30"></div>
-                                <div class="chart-box border-mint/30 glow-mint text-mint text-[10px] uppercase">Growth Mindset</div>
+                                <div class="chart-box border-mint/30 glow-mint text-mint text-[10px] uppercase">Growth
+                                    Mindset</div>
                                 <div class="connector bg-mint/30"></div>
-                                <div class="text-[10px] text-white font-medium italic p-3 border border-mint/20 rounded-lg text-center w-full max-w-[160px]">
-                                    Reinforces:<br/>"I can handle this"
+                                <div
+                                    class="text-[10px] text-white font-medium italic p-3 border border-mint/20 rounded-lg text-center w-full max-w-[160px]">
+                                    Reinforces:<br />"I can handle this"
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="mt-12 p-4 bg-zinc-900/50 rounded-full border border-white/5 text-[10px] font-bold tracking-widest text-zinc-600 uppercase flex items-center gap-4">
+
+                        <div
+                            class="mt-12 p-4 bg-zinc-900/50 rounded-full border border-white/5 text-[10px] font-bold tracking-widest text-zinc-600 uppercase flex items-center gap-4">
                             <div class="w-2 h-2 rounded-full bg-zinc-700 animate-pulse"></div>
                             Self-Fulfilling Prophecy Loop
                             <div class="w-2 h-2 rounded-full bg-zinc-700 animate-pulse"></div>
@@ -234,31 +292,42 @@
                     </div>
                     <!-- Citation -->
                     <div class="absolute bottom-4 right-6 flex items-center gap-1.5 text-[10px] text-zinc-500 italic">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg> 
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
                         Lazarus & Folkman (1984) — Cognitive appraisal model
                     </div>
                 </div>
             </div>
 
             <div class="p-12 card-blur text-center space-y-6 mt-6">
-                <div class="text-5xl md:text-7xl font-black tracking-tighter text-white">PT <span class="text-zinc-700">vs.</span> PR</div>
-                <p class="text-zinc-500 uppercase tracking-[0.3em] font-bold text-xs">Perceived Threat vs. Perceived Resources</p>
+                <div class="text-5xl md:text-7xl font-black tracking-tighter text-white">PT <span
+                        class="text-zinc-700">vs.</span> PR</div>
+                <p class="text-zinc-500 uppercase tracking-[0.3em] font-bold text-xs">Perceived Threat vs. Perceived
+                    Resources</p>
                 <div class="grid md:grid-cols-2 gap-8 pt-10 text-left">
                     <div class="space-y-3">
                         <div class="text-mint font-bold">If PR > PT (Resources exceed threat):</div>
-                        <p class="text-zinc-400 text-sm">Challenge zone. Clean mobilisation. Focused, sharp, decisive.</p>
+                        <p class="text-zinc-400 text-sm">Challenge zone. Clean mobilisation. Focused, sharp, decisive.
+                        </p>
                     </div>
                     <div class="space-y-3">
                         <div class="text-red-400 font-bold">If PT > PR (Threat exceeds resources):</div>
-                        <p class="text-zinc-400 text-sm">Protection mode. System reprioritises from optimal performance to survival.</p>
+                        <p class="text-zinc-400 text-sm">Protection mode. System reprioritises from optimal performance
+                            to survival.</p>
                     </div>
                 </div>
             </div>
 
             <div class="space-y-6 text-zinc-300">
-                <p>Notice something? It's not about how hard the situation actually is. It's about how your brain has <span class="text-white font-bold">calculated</span> it.</p>
+                <p>Notice something? It's not about how hard the situation actually is. It's about how your brain has
+                    <span class="text-white font-bold">calculated</span> it.</p>
                 <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <p class="text-sm italic text-zinc-400">The stress response doesn't trigger because a situation is objectively hard. It triggers when your brain calculates that <span class="text-white font-bold">demand exceeds your perceived control</span>.</p>
+                    <p class="text-sm italic text-zinc-400">The stress response doesn't trigger because a situation is
+                        objectively hard. It triggers when your brain calculates that <span
+                            class="text-white font-bold">demand exceeds your perceived control</span>.</p>
                 </div>
             </div>
 
@@ -273,17 +342,37 @@
                         </tr>
                     </thead>
                     <tbody class="text-zinc-300">
-                        <tr class="border-b border-white/5"><td class="p-6 font-medium">Perceived Threat</td><td class="p-6">7 / 10</td><td class="p-6">8 / 10</td></tr>
-                        <tr class="border-b border-white/5"><td class="p-6 font-medium">Perceived Resources</td><td class="p-6 text-mint font-bold">9 / 10</td><td class="p-6 text-red-400 font-bold">5 / 10</td></tr>
-                        <tr class="border-b border-white/5"><td class="p-6 font-medium">Gap</td><td class="p-6 text-mint">−2 → challenge zone (clean)</td><td class="p-6 text-red-500 font-bold">+3 → protection mode (split)</td></tr>
-                        <tr><td class="p-6 font-medium">Result</td><td class="p-6 text-white">Sharp, decisive, fast recovery</td><td class="p-6 text-zinc-500">Narrowing, defensive filtering, latency</td></tr>
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-medium">Perceived Threat</td>
+                            <td class="p-6">7 / 10</td>
+                            <td class="p-6">8 / 10</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-medium">Perceived Resources</td>
+                            <td class="p-6 text-mint font-bold">9 / 10</td>
+                            <td class="p-6 text-red-400 font-bold">5 / 10</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-medium">Gap</td>
+                            <td class="p-6 text-mint">−2 → challenge zone (clean)</td>
+                            <td class="p-6 text-red-500 font-bold">+3 → protection mode (split)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-medium">Result</td>
+                            <td class="p-6 text-white">Sharp, decisive, fast recovery</td>
+                            <td class="p-6 text-zinc-500">Narrowing, defensive filtering, latency</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
 
             <p class="text-zinc-400 italic leading-relaxed mt-6">
-                Same stakes. Same role. Completely different internal state and output quality - even if both leave the room looking composed.<br/><br/>
-                <span class="text-white font-bold">The key point:</span> the nervous system doesn't respond to reality. It responds to perceived instability. A highly competent executive can still tip into protection mode if their sense of control drops, because of identity exposure, unpredictability, or accumulated load from previous events.
+                Same stakes. Same role. Completely different internal state and output quality - even if both leave the
+                room looking composed.<br /><br />
+                <span class="text-white font-bold">The key point:</span> the nervous system doesn't respond to reality.
+                It responds to perceived instability. A highly competent executive can still tip into protection mode if
+                their sense of control drops, because of identity exposure, unpredictability, or accumulated load from
+                previous events.
             </p>
         </section>
 
@@ -292,7 +381,8 @@
             <div>
                 <span class="section-tag">Part 2</span>
                 <h2 class="text-4xl font-black mb-6">The Variable Nobody Tracks</h2>
-                <p class="text-zinc-400">Performance under pressure doesn't just depend on how much pressure you're under. It depends on <span class="text-white font-bold italic">two things simultaneously:</span></p>
+                <p class="text-zinc-400">Performance under pressure doesn't just depend on how much pressure you're
+                    under. It depends on <span class="text-white font-bold italic">two things simultaneously:</span></p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
@@ -308,13 +398,18 @@
 
             <!-- Pre-Graph Explanation -->
             <div class="space-y-6 text-zinc-300 text-lg leading-relaxed">
-                <p>High pressure + internal stability → <span class="text-white font-bold">full capacity, fast recovery, clean decisions.</span></p>
-                <p>High pressure + internal instability → <span class="text-white font-bold">split bandwidth, degraded output, slow recovery.</span></p>
-                <p>Same pressure level. Completely different result. The variable that changes everything isn't the workload - it's the regulation underneath it.</p>
+                <p>High pressure + internal stability → <span class="text-white font-bold">full capacity, fast recovery,
+                        clean decisions.</span></p>
+                <p>High pressure + internal instability → <span class="text-white font-bold">split bandwidth, degraded
+                        output, slow recovery.</span></p>
+                <p>Same pressure level. Completely different result. The variable that changes everything isn't the
+                    workload - it's the regulation underneath it.</p>
                 <p>Think of it as two axes:</p>
                 <ul class="space-y-2 list-none text-zinc-400">
-                    <li><span class="text-white font-bold">Horizontal axis → Load</span> (the level of demand you're operating under)</li>
-                    <li><span class="text-white font-bold">Vertical axis → Regulation</span> (your internal stability at that load)</li>
+                    <li><span class="text-white font-bold">Horizontal axis → Load</span> (the level of demand you're
+                        operating under)</li>
+                    <li><span class="text-white font-bold">Vertical axis → Regulation</span> (your internal stability at
+                        that load)</li>
                 </ul>
                 <p>This gives you four states:</p>
             </div>
@@ -322,45 +417,60 @@
             <!-- Improved Matrix Graph -->
             <div class="flex items-stretch max-w-3xl mx-auto mt-12 pb-8">
                 <!-- Y-Axis -->
-                <div class="w-16 flex flex-col justify-between items-center py-8 pr-6 border-r-2 border-white/20 relative">
-                    <div class="absolute left-[-2.5rem] top-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap text-[10px] font-black text-zinc-500 uppercase tracking-widest">Regulation (Stability Level)</div>
-                    <span class="text-[10px] font-black text-emerald-400 uppercase tracking-widest -rotate-90 origin-center mb-6">Stable</span>
-                    <span class="text-[10px] font-black text-red-500 uppercase tracking-widest -rotate-90 origin-center mt-6">Unstable</span>
+                <div
+                    class="w-16 flex flex-col justify-between items-center py-8 pr-6 border-r-2 border-white/20 relative">
+                    <div
+                        class="absolute left-[-2.5rem] top-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap text-[10px] font-black text-zinc-500 uppercase tracking-widest">
+                        Regulation (Stability Level)</div>
+                    <span
+                        class="text-[10px] font-black text-emerald-400 uppercase tracking-widest -rotate-90 origin-center mb-6">Stable</span>
+                    <span
+                        class="text-[10px] font-black text-red-500 uppercase tracking-widest -rotate-90 origin-center mt-6">Unstable</span>
                 </div>
-                
+
                 <!-- Graph Area -->
                 <div class="flex-1 flex flex-col pl-6">
                     <div class="grid grid-cols-2 gap-4 border-b-2 border-white/20 pb-6">
                         <div class="p-6 card-blur h-48 flex flex-col justify-end border-emerald-500/20">
-                            <div class="text-emerald-400 font-black mb-1 tracking-widest uppercase text-[10px]">Maintenance</div>
+                            <div class="text-emerald-400 font-black mb-1 tracking-widest uppercase text-[10px]">
+                                Maintenance</div>
                             <p class="text-zinc-400 text-[10px] leading-tight">Low stimulation, calm baseline.</p>
                         </div>
-                        
+
                         <!-- Glowing Expansion Block -->
-                        <div class="p-6 card-blur h-48 flex flex-col justify-end bg-mint/10 border-mint/50 shadow-[0_0_40px_rgba(152,255,217,0.35)] relative overflow-hidden z-10">
+                        <div
+                            class="p-6 card-blur h-48 flex flex-col justify-end bg-mint/10 border-mint/50 shadow-[0_0_40px_rgba(152,255,217,0.35)] relative overflow-hidden z-10">
                             <div class="absolute inset-0 bg-gradient-to-tr from-mint/10 to-transparent"></div>
                             <div class="relative z-10">
-                                <div class="text-mint font-black mb-1 tracking-widest uppercase text-[10px] drop-shadow-[0_0_8px_rgba(152,255,217,0.8)]">Expansion ✨</div>
+                                <div
+                                    class="text-mint font-black mb-1 tracking-widest uppercase text-[10px] drop-shadow-[0_0_8px_rgba(152,255,217,0.8)]">
+                                    Expansion ✨</div>
                                 <p class="text-white font-bold text-[10px] leading-tight">High load, full control.</p>
-                                <p class="text-mint/70 font-medium text-[8px] mt-1 italic">Elite operators engineer this state.</p>
+                                <p class="text-mint/70 font-medium text-[8px] mt-1 italic">Elite operators engineer this
+                                    state.</p>
                             </div>
                         </div>
-                        
+
                         <!-- Readable Anxiety Block (Dashed) -->
-                        <div class="p-6 card-blur h-48 flex flex-col justify-end border border-dashed border-zinc-700 bg-zinc-900/30">
-                            <div class="text-zinc-400 font-black mb-1 tracking-widest uppercase text-[10px]">Anxiety</div>
+                        <div
+                            class="p-6 card-blur h-48 flex flex-col justify-end border border-dashed border-zinc-700 bg-zinc-900/30">
+                            <div class="text-zinc-400 font-black mb-1 tracking-widest uppercase text-[10px]">Anxiety
+                            </div>
                             <p class="text-zinc-400 text-[10px] leading-tight">Restless with no direction.</p>
                         </div>
-                        
+
                         <div class="p-6 card-blur h-48 flex flex-col justify-end border-red-500/20">
-                            <div class="text-red-500 font-black mb-1 tracking-widest uppercase text-[10px]">Chaotic Survival 🔥</div>
+                            <div class="text-red-500 font-black mb-1 tracking-widest uppercase text-[10px]">Chaotic
+                                Survival 🔥</div>
                             <p class="text-zinc-400 text-[10px] leading-tight">Overwhelmed, no structure.</p>
                         </div>
                     </div>
                     <!-- X-Axis -->
                     <div class="flex justify-between items-center pt-4 relative">
                         <span class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Low</span>
-                        <span class="text-[10px] font-black text-zinc-500 uppercase tracking-widest absolute left-1/2 -translate-x-1/2">Load (Demand Level)</span>
+                        <span
+                            class="text-[10px] font-black text-zinc-500 uppercase tracking-widest absolute left-1/2 -translate-x-1/2">Load
+                            (Demand Level)</span>
                         <span class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">High</span>
                     </div>
                 </div>
@@ -368,14 +478,22 @@
 
             <!-- Post-Graph Explanation -->
             <div class="space-y-8 text-zinc-300 text-lg leading-relaxed pt-10">
-                <div class="citation-box"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg> McEwen (1998) — Allostatic load</div>
-                
-                <p>The sweet spot isn't less pressure. It's <span class="text-white font-bold">high load with stable regulation,</span> full mobilisation, no bandwidth split, fast recovery.</p>
+                <div class="citation-box"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                        </path>
+                    </svg> McEwen (1998) — Allostatic load</div>
+
+                <p>The sweet spot isn't less pressure. It's <span class="text-white font-bold">high load with stable
+                        regulation,</span> full mobilisation, no bandwidth split, fast recovery.</p>
                 <p class="text-mint font-bold">This is where capacity actually grows.</p>
-                <p>Here's what that means practically: you can be operating at the absolute edge of your capacity and feel calm doing it.</p>
-                
+                <p>Here's what that means practically: you can be operating at the absolute edge of your capacity and
+                    feel calm doing it.</p>
+
                 <div class="p-8 bg-zinc-900/40 rounded-3xl border border-white/5 space-y-4 italic">
-                    <p>"Calm isn't low output. It's not low intensity either. It's a regulated state - meaning your system is running everything through one channel instead of two. Most high-performers have never experienced this."</p>
+                    <p>"Calm isn't low output. It's not low intensity either. It's a regulated state - meaning your
+                        system is running everything through one channel instead of two. Most high-performers have never
+                        experienced this."</p>
                 </div>
             </div>
         </section>
@@ -387,12 +505,14 @@
                     <div id="zone-header" class="mb-8 md:mb-12 shrink-0">
                         <span class="section-tag">Part 3</span>
                         <h2 class="text-3xl md:text-4xl font-black mb-4">The Three Zones</h2>
-                        <p class="text-zinc-400 text-base md:text-lg">Your performance system operates across three zones based on the PT vs PR gap. Each one is telling you something specific.</p>
+                        <p class="text-zinc-400 text-base md:text-lg">Your performance system operates across three
+                            zones based on the PT vs PR gap. Each one is telling you something specific.</p>
                     </div>
 
                     <div class="flex flex-col md:flex-row gap-8 items-start w-full">
                         <!-- Regulator Controls -->
-                        <div class="flex md:flex-col justify-center items-center gap-4 md:w-16 pt-2 md:pt-10 mx-auto md:mx-0 shrink-0">
+                        <div
+                            class="flex md:flex-col justify-center items-center gap-4 md:w-16 pt-2 md:pt-10 mx-auto md:mx-0 shrink-0">
                             <div class="regulator-dot active" onclick="updateZones(0)"></div>
                             <div class="regulator-line hidden md:block"></div>
                             <div class="regulator-dot" onclick="updateZones(1)"></div>
@@ -402,27 +522,42 @@
 
                         <!-- Cards Container -->
                         <div class="zone-carousel-container w-full">
-                            
+
                             <!-- Card 1: Underload -->
                             <div class="zone-card card-blur p-6 md:p-12 border-blue-500/20" data-state="active">
                                 <div class="flex items-center gap-4 mb-4 md:mb-6">
-                                    <div class="text-blue-400 font-black tracking-widest uppercase text-base md:text-lg">Underload</div>
-                                    <div class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold tracking-widest">PR >> PT</div>
+                                    <div
+                                        class="text-blue-400 font-black tracking-widest uppercase text-base md:text-lg">
+                                        Underload</div>
+                                    <div
+                                        class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold tracking-widest">
+                                        PR >> PT</div>
                                 </div>
                                 <div class="space-y-4 md:space-y-6">
-                                    <p class="text-zinc-300 font-medium italic text-sm md:text-base">Resources far exceed demand. System feels flat, under-stimulated. This is where your brain is <span class="text-blue-400 font-bold">most creative</span>.</p>
-                                    <ul class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-blue-500/50">
+                                    <p class="text-zinc-300 font-medium italic text-sm md:text-base">Resources far
+                                        exceed demand. System feels flat, under-stimulated. This is where your brain is
+                                        <span class="text-blue-400 font-bold">most creative</span>.</p>
+                                    <ul
+                                        class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-blue-500/50">
                                         <li>Broad perception</li>
                                         <li>Open pattern recognition</li>
                                         <li>Novel connections</li>
                                         <li>Long-range strategic thinking</li>
                                     </ul>
-                                    <div class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
-                                        <p class="mb-2">It's why the best ideas come in the shower, on a walk, at 6 am before the noise starts.</p>
-                                        <p>It's why great artists and architects do their best generative work in calm, unhurried environments - they're not being lazy, they're in the zone where the brain has full access to its creative bandwidth.</p>
+                                    <div
+                                        class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
+                                        <p class="mb-2">It's why the best ideas come in the shower, on a walk, at 6 am
+                                            before the noise starts.</p>
+                                        <p>It's why great artists and architects do their best generative work in calm,
+                                            unhurried environments - they're not being lazy, they're in the zone where
+                                            the brain has full access to its creative bandwidth.</p>
                                     </div>
                                     <div class="pt-4 border-t border-white/10">
-                                        <p class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase"><span class="text-white">Reveals:</span> Your current creative and strategic ceiling - what your system can generate when it's not in resource-protection mode.</p>
+                                        <p
+                                            class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase">
+                                            <span class="text-white">Reveals:</span> Your current creative and strategic
+                                            ceiling - what your system can generate when it's not in resource-protection
+                                            mode.</p>
                                     </div>
                                 </div>
                             </div>
@@ -430,23 +565,36 @@
                             <!-- Card 2: Challenge Zone -->
                             <div class="zone-card card-blur p-6 md:p-12 border-mint/20" data-state="next">
                                 <div class="flex items-center gap-4 mb-4 md:mb-6">
-                                    <div class="text-mint font-black tracking-widest uppercase text-base md:text-lg">Challenge Zone</div>
-                                    <div class="px-3 py-1 rounded-full bg-mint/10 text-mint text-[10px] font-bold tracking-widest">PR ≈ PT</div>
+                                    <div class="text-mint font-black tracking-widest uppercase text-base md:text-lg">
+                                        Challenge Zone</div>
+                                    <div
+                                        class="px-3 py-1 rounded-full bg-mint/10 text-mint text-[10px] font-bold tracking-widest">
+                                        PR ≈ PT</div>
                                 </div>
                                 <div class="space-y-4 md:space-y-6">
-                                    <p class="text-zinc-300 font-medium italic text-sm md:text-base">High demand, stable perception. The nervous system mobilises fully. This is where your brain is <span class="text-mint font-bold">most competitive</span>.</p>
-                                    <ul class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-mint/50">
+                                    <p class="text-zinc-300 font-medium italic text-sm md:text-base">High demand, stable
+                                        perception. The nervous system mobilises fully. This is where your brain is
+                                        <span class="text-mint font-bold">most competitive</span>.</p>
+                                    <ul
+                                        class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-mint/50">
                                         <li>Focus sharpens</li>
                                         <li>Energy moves</li>
                                         <li>Decisions are clean</li>
                                         <li>No identity threat. No bandwidth split.</li>
                                     </ul>
-                                    <div class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
-                                        <p class="text-white font-medium mb-2">Executing strategy | Using pattern libraries | Pushing hard | Getting fast feedback.</p>
-                                        <p>Think elite athletes at their best: they aren't doing anything fundamentally new in competition. They're deploying existing skills and patterns under pressure with maximum efficiency.</p>
+                                    <div
+                                        class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
+                                        <p class="text-white font-medium mb-2">Executing strategy | Using pattern
+                                            libraries | Pushing hard | Getting fast feedback.</p>
+                                        <p>Think elite athletes at their best: they aren't doing anything fundamentally
+                                            new in competition. They're deploying existing skills and patterns under
+                                            pressure with maximum efficiency.</p>
                                     </div>
                                     <div class="pt-4 border-t border-white/10">
-                                        <p class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase"><span class="text-white">Reveals:</span> Your current performance tolerance - the ceiling you can operate at cleanly right now.</p>
+                                        <p
+                                            class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase">
+                                            <span class="text-white">Reveals:</span> Your current performance tolerance
+                                            - the ceiling you can operate at cleanly right now.</p>
                                     </div>
                                 </div>
                             </div>
@@ -454,23 +602,36 @@
                             <!-- Card 3: Overload -->
                             <div class="zone-card card-blur p-6 md:p-12 border-red-500/20" data-state="prev">
                                 <div class="flex items-center gap-4 mb-4 md:mb-6">
-                                    <div class="text-red-500 font-black tracking-widest uppercase text-base md:text-lg">Overload / Protection</div>
-                                    <div class="px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-[10px] font-bold tracking-widest">PT > PR</div>
+                                    <div class="text-red-500 font-black tracking-widest uppercase text-base md:text-lg">
+                                        Overload / Protection</div>
+                                    <div
+                                        class="px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-[10px] font-bold tracking-widest">
+                                        PT > PR</div>
                                 </div>
                                 <div class="space-y-4 md:space-y-6">
-                                    <p class="text-zinc-300 font-medium italic text-sm md:text-base">This is where <span class="text-red-500 font-bold">all internal friction</span> lives. The system shifts priority from the task to personal protection.</p>
-                                    <ul class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-red-500/50">
+                                    <p class="text-zinc-300 font-medium italic text-sm md:text-base">This is where <span
+                                            class="text-red-500 font-bold">all internal friction</span> lives. The
+                                        system shifts priority from the task to personal protection.</p>
+                                    <ul
+                                        class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-red-500/50">
                                         <li>Brain-fog & Heaviness</li>
                                         <li>Second-guessing</li>
                                         <li>Perception narrows & Risk tightens</li>
                                         <li>Stress doesn't fully dissipate</li>
                                     </ul>
-                                    <div class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
-                                        <p>You default to proven patterns over optimal solutions. Decisions speed up but lose depth.</p>
-                                        <p class="mt-2 text-white font-medium">You're still executing - but part of your cognitive bandwidth has been split away from the task and redirected to managing the internal threat.</p>
+                                    <div
+                                        class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
+                                        <p>You default to proven patterns over optimal solutions. Decisions speed up but
+                                            lose depth.</p>
+                                        <p class="mt-2 text-white font-medium">You're still executing - but part of your
+                                            cognitive bandwidth has been split away from the task and redirected to
+                                            managing the internal threat.</p>
                                     </div>
                                     <div class="pt-4 border-t border-white/10">
-                                        <p class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase"><span class="text-white">Reveals:</span> Exactly where your bandwidth is leaking - which demands consume more resources than the task warrants.</p>
+                                        <p
+                                            class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase">
+                                            <span class="text-white">Reveals:</span> Exactly where your bandwidth is
+                                            leaking - which demands consume more resources than the task warrants.</p>
                                     </div>
                                 </div>
                             </div>
@@ -483,19 +644,32 @@
 
         <!-- Outro Text -->
         <section class="mb-32 mt-0 relative z-20">
-            <div class="p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl text-zinc-300 leading-relaxed">
+            <div
+                class="p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl text-zinc-300 leading-relaxed">
                 <p class="mb-2">The real pressure isn't external. It's in your brain's interpretation.</p>
-                <p>Two leaders can face the same crisis. One is in a challenge zone - mobilised, sharp, clean. The other is in protection mode - compressed, reactive, split.</p>
-                <p class="text-white font-bold mt-4">The external environment is identical. The internal calculation is the difference.</p>
+                <p>Two leaders can face the same crisis. One is in a challenge zone - mobilised, sharp, clean. The other
+                    is in protection mode - compressed, reactive, split.</p>
+                <p class="text-white font-bold mt-4">The external environment is identical. The internal calculation is
+                    the difference.</p>
             </div>
         </section>
 
         <!-- Part 4 -->
         <section class="mb-32 space-y-12">
-            <div><span class="section-tag">Part 4</span><h2 class="text-4xl font-black mb-6">Why Pushing Through Works - And Where It Stops</h2><p class="text-zinc-400">Short-term, it got you here. But running a costly pattern for long enough, you stop feeling it as costly. <span class="text-white font-bold italic">You just call it normal.</span></p></div>
+            <div><span class="section-tag">Part 4</span>
+                <h2 class="text-4xl font-black mb-6">Why Pushing Through Works - And Where It Stops</h2>
+                <p class="text-zinc-400">Short-term, it got you here. But running a costly pattern for long enough, you
+                    stop feeling it as costly. <span class="text-white font-bold italic">You just call it normal.</span>
+                </p>
+            </div>
             <div class="p-10 card-blur border-mint/10">
-                <p class="text-zinc-300 leading-[1.8]">You don't notice it the same way you don't notice the <span class="text-white">hum of an air conditioning unit</span> that's been running for years. It's just the environment now. But normalised doesn't mean free. The meter has been ticking the whole time; you've just stopped watching it.</p>
-                <p class="text-zinc-400 mt-6 italic font-medium">That's actually the most expensive version of this pattern. Not the acute spike that gets your attention. The low-grade, continuous drain that never quite crosses the threshold where you'd stop and audit it.</p>
+                <p class="text-zinc-300 leading-[1.8]">You don't notice it the same way you don't notice the <span
+                        class="text-white">hum of an air conditioning unit</span> that's been running for years. It's
+                    just the environment now. But normalised doesn't mean free. The meter has been ticking the whole
+                    time; you've just stopped watching it.</p>
+                <p class="text-zinc-400 mt-6 italic font-medium">That's actually the most expensive version of this
+                    pattern. Not the acute spike that gets your attention. The low-grade, continuous drain that never
+                    quite crosses the threshold where you'd stop and audit it.</p>
             </div>
 
             <!-- Static Compounding Reality Setup -->
@@ -505,172 +679,268 @@
                     <p class="text-zinc-400 mt-2 text-lg">Two leaders. Same revenue, same growth, same results.</p>
                 </div>
 
-                <div class="max-w-3xl mx-auto mb-16 p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl">
-                    <p class="text-white font-bold text-xl mb-6">Same results this quarter. <span class="text-mint">Compound that over five years.</span></p>
+                <div
+                    class="max-w-3xl mx-auto mb-16 p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl">
+                    <p class="text-white font-bold text-xl mb-6">Same results this quarter. <span
+                            class="text-mint">Compound that over five years.</span></p>
                     <div class="space-y-4 text-zinc-300 leading-relaxed text-lg">
                         <p>Who makes sharper decisions when a real crisis hits, when everything goes south?</p>
                         <p>Who is still operating at full capacity at 60, and who burned out at 52?</p>
                         <div class="p-5 bg-zinc-900/60 rounded-2xl border border-white/5 mt-6">
-                            <p class="text-white font-medium italic">"The problem isn't the strategy. It's the compounding cost of running it at a senior level, sustained, over the years."</p>
+                            <p class="text-white font-medium italic">"The problem isn't the strategy. It's the
+                                compounding cost of running it at a senior level, sustained, over the years."</p>
                         </div>
                     </div>
                 </div>
 
-                <p class="text-zinc-500 text-xs tracking-widest uppercase mt-4 text-center animate-pulse mb-8">Select a pattern below to map the 5-year internal architecture</p>
-                
+                <p class="text-zinc-500 text-xs tracking-widest uppercase mt-4 text-center animate-pulse mb-8">Select a
+                    pattern below to map the 5-year internal architecture</p>
+
                 <!-- Interactive Compounding Section (Added Glows) -->
                 <div class="grid md:grid-cols-2 gap-6" id="leader-cards">
                     <!-- Leader A -->
-                    <button onclick="revealCompoundCost('A')" id="btn-leader-a" class="text-left p-8 card-blur border-transparent hover:border-mint/30 hover:shadow-[0_0_25px_rgba(152,255,217,0.15)] transition-all duration-300 group relative overflow-hidden focus:outline-none">
-                        <div class="absolute inset-0 bg-mint/0 group-hover:bg-mint/5 transition-colors duration-300"></div>
+                    <button onclick="revealCompoundCost('A')" id="btn-leader-a"
+                        class="text-left p-8 card-blur border-transparent hover:border-mint/30 hover:shadow-[0_0_25px_rgba(152,255,217,0.15)] transition-all duration-300 group relative overflow-hidden focus:outline-none">
+                        <div class="absolute inset-0 bg-mint/0 group-hover:bg-mint/5 transition-colors duration-300">
+                        </div>
                         <div class="relative z-10 pointer-events-none">
                             <h4 class="text-mint font-black tracking-widest uppercase mb-4 flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                </svg>
                                 Leader A
                             </h4>
-                            <p class="text-zinc-300 text-sm leading-relaxed">Operates through a challenge zone with high regulation. Clean activation. Fast decisions. Full recovery between events. Minimal internal carryover.</p>
+                            <p class="text-zinc-300 text-sm leading-relaxed">Operates through a challenge zone with high
+                                regulation. Clean activation. Fast decisions. Full recovery between events. Minimal
+                                internal carryover.</p>
                         </div>
                     </button>
-                    
+
                     <!-- Leader B -->
-                    <button onclick="revealCompoundCost('B')" id="btn-leader-b" class="text-left p-8 card-blur border-transparent hover:border-red-500/30 hover:shadow-[0_0_25px_rgba(255,77,77,0.15)] transition-all duration-300 group relative overflow-hidden focus:outline-none">
-                        <div class="absolute inset-0 bg-red-500/0 group-hover:bg-red-500/5 transition-colors duration-300"></div>
+                    <button onclick="revealCompoundCost('B')" id="btn-leader-b"
+                        class="text-left p-8 card-blur border-transparent hover:border-red-500/30 hover:shadow-[0_0_25px_rgba(255,77,77,0.15)] transition-all duration-300 group relative overflow-hidden focus:outline-none">
+                        <div
+                            class="absolute inset-0 bg-red-500/0 group-hover:bg-red-500/5 transition-colors duration-300">
+                        </div>
                         <div class="relative z-10 pointer-events-none">
                             <h4 class="text-red-500 font-black tracking-widest uppercase mb-4 flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
                                 Leader B
                             </h4>
-                            <p class="text-zinc-300 text-sm leading-relaxed">Operates through overload, suppresses it, and delivers the same output through discipline and willpower.</p>
+                            <p class="text-zinc-300 text-sm leading-relaxed">Operates through overload, suppresses it,
+                                and delivers the same output through discipline and willpower.</p>
                         </div>
                     </button>
                 </div>
-                
+
                 <!-- Graphic Trajectory A -->
-                <div id="compound-result-a" class="hidden opacity-0 translate-y-8 transition-all duration-700 ease-out mt-12 p-6 md:p-10 border border-mint/20 rounded-[32px] relative overflow-hidden bg-gradient-to-t from-mint/10 to-transparent shadow-[0_0_40px_rgba(152,255,217,0.1)]">
+                <div id="compound-result-a"
+                    class="hidden opacity-0 translate-y-8 transition-all duration-700 ease-out mt-12 p-6 md:p-10 border border-mint/20 rounded-[32px] relative overflow-hidden bg-gradient-to-t from-mint/10 to-transparent shadow-[0_0_40px_rgba(152,255,217,0.1)]">
                     <div class="text-center mb-10">
                         <h4 class="text-mint font-black text-xl md:text-2xl uppercase tracking-widest">Leader A</h4>
-                        <p class="text-white mt-1 font-medium text-sm md:text-base">The Compounding Edge (Upward Spiral)</p>
+                        <p class="text-white mt-1 font-medium text-sm md:text-base">The Compounding Edge (Upward Spiral)
+                        </p>
                     </div>
 
                     <div class="flex justify-center gap-4 md:gap-10 relative max-w-2xl mx-auto">
-                         <!-- Graphic Side -->
-                         <div class="w-10 md:w-16 relative flex flex-col justify-between py-2 items-center shrink-0">
-                             <svg class="w-6 md:w-10 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.8)] absolute top-0 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
-                             <!-- Wavy abstract spiral line -->
-                             <svg viewBox="0 0 40 250" class="w-full h-[calc(100%-4rem)] text-mint opacity-40 absolute top-10" preserveAspectRatio="none">
-                                 <path d="M20,250 C40,210 0,170 20,130 C40,90 0,50 20,10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                             </svg>
-                             <div class="text-[8px] md:text-[9px] font-black tracking-widest text-mint uppercase absolute bottom-0 opacity-70">Start</div>
-                         </div>
+                        <!-- Graphic Side -->
+                        <div class="w-10 md:w-16 relative flex flex-col justify-between py-2 items-center shrink-0">
+                            <svg class="w-6 md:w-10 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.8)] absolute top-0 animate-bounce"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                            </svg>
+                            <!-- Wavy abstract spiral line -->
+                            <svg viewBox="0 0 40 250"
+                                class="w-full h-[calc(100%-4rem)] text-mint opacity-40 absolute top-10"
+                                preserveAspectRatio="none">
+                                <path d="M20,250 C40,210 0,170 20,130 C40,90 0,50 20,10" fill="none"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            <div
+                                class="text-[8px] md:text-[9px] font-black tracking-widest text-mint uppercase absolute bottom-0 opacity-70">
+                                Start</div>
+                        </div>
 
-                         <!-- Text Side (Reversed DOM for Upward Scroll visual) -->
-                         <div class="flex flex-col-reverse gap-3 pb-6 pt-10">
-                             <!-- Step 1 (Rendered at Bottom) -->
-                             <div class="text-[11px] md:text-[12px] text-zinc-500 ml-0 flex items-center gap-3">
-                                 <span class="w-1.5 h-1.5 rounded-full bg-mint/30 shrink-0"></span> Challenge Zone Activation
-                             </div>
-                             <div class="text-[12px] md:text-[13px] text-zinc-400 ml-1.5 md:ml-2 flex items-center gap-3">
-                                 <span class="w-1.5 h-1.5 rounded-full bg-mint/40 shrink-0"></span> Full Resources Toward the Task
-                             </div>
-                             <div class="text-[13px] md:text-[14px] text-zinc-300 ml-3 md:ml-4 flex items-center gap-3">
-                                 <span class="w-2 h-2 rounded-full bg-mint/50 shrink-0"></span> Clean Decision Execution
-                             </div>
-                             <div class="text-[14px] md:text-[15px] text-zinc-200 ml-4.5 md:ml-6 flex items-center gap-3">
-                                 <span class="w-2 h-2 rounded-full bg-mint/60 shrink-0"></span> Full Bandwidth Available
-                             </div>
-                             <div class="text-[15px] md:text-[16px] text-zinc-100 ml-6 md:ml-8 flex items-center gap-3 font-medium">
-                                 <span class="w-2 h-2 rounded-full bg-mint/70 shrink-0"></span> Fast Recovery Between Events
-                             </div>
-                             <div class="text-[16px] md:text-[17px] text-white ml-7.5 md:ml-10 flex items-center gap-3 font-semibold">
-                                 <span class="w-2.5 h-2.5 rounded-full bg-mint/80 shrink-0"></span> Pattern Recognition Sharpens
-                             </div>
-                             <div class="text-[17px] md:text-[18px] text-white ml-9 md:ml-12 flex items-center gap-3 font-bold">
-                                 <span class="w-2.5 h-2.5 rounded-full bg-mint/90 shrink-0"></span> Identity Stable Under Pressure
-                             </div>
-                             <div class="text-[18px] md:text-[20px] text-white ml-10.5 md:ml-14 flex items-center gap-3 font-black drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">
-                                 <span class="w-3 h-3 rounded-full bg-mint shrink-0"></span> Capacity Expands
-                             </div>
-                             <!-- Step 9 (Rendered at Top) -->
-                             <div class="text-[20px] md:text-[22px] text-mint ml-12 md:ml-16 flex items-center gap-3 font-black drop-shadow-[0_0_10px_rgba(152,255,217,0.8)]">
-                                 <span class="w-4 h-4 rounded-full bg-mint shadow-[0_0_15px_rgba(152,255,217,1)] shrink-0"></span> Higher Load — Same Regulation
-                             </div>
-                         </div>
+                        <!-- Text Side (Reversed DOM for Upward Scroll visual) -->
+                        <div class="flex flex-col-reverse gap-3 pb-6 pt-10">
+                            <!-- Step 1 (Rendered at Bottom) -->
+                            <div class="text-[11px] md:text-[12px] text-zinc-500 ml-0 flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-mint/30 shrink-0"></span> Challenge Zone
+                                Activation
+                            </div>
+                            <div
+                                class="text-[12px] md:text-[13px] text-zinc-400 ml-1.5 md:ml-2 flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-mint/40 shrink-0"></span> Full Resources Toward
+                                the Task
+                            </div>
+                            <div class="text-[13px] md:text-[14px] text-zinc-300 ml-3 md:ml-4 flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-mint/50 shrink-0"></span> Clean Decision Execution
+                            </div>
+                            <div
+                                class="text-[14px] md:text-[15px] text-zinc-200 ml-4.5 md:ml-6 flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-mint/60 shrink-0"></span> Full Bandwidth Available
+                            </div>
+                            <div
+                                class="text-[15px] md:text-[16px] text-zinc-100 ml-6 md:ml-8 flex items-center gap-3 font-medium">
+                                <span class="w-2 h-2 rounded-full bg-mint/70 shrink-0"></span> Fast Recovery Between
+                                Events
+                            </div>
+                            <div
+                                class="text-[16px] md:text-[17px] text-white ml-7.5 md:ml-10 flex items-center gap-3 font-semibold">
+                                <span class="w-2.5 h-2.5 rounded-full bg-mint/80 shrink-0"></span> Pattern Recognition
+                                Sharpens
+                            </div>
+                            <div
+                                class="text-[17px] md:text-[18px] text-white ml-9 md:ml-12 flex items-center gap-3 font-bold">
+                                <span class="w-2.5 h-2.5 rounded-full bg-mint/90 shrink-0"></span> Identity Stable Under
+                                Pressure
+                            </div>
+                            <div
+                                class="text-[18px] md:text-[20px] text-white ml-10.5 md:ml-14 flex items-center gap-3 font-black drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">
+                                <span class="w-3 h-3 rounded-full bg-mint shrink-0"></span> Capacity Expands
+                            </div>
+                            <!-- Step 9 (Rendered at Top) -->
+                            <div
+                                class="text-[20px] md:text-[22px] text-mint ml-12 md:ml-16 flex items-center gap-3 font-black drop-shadow-[0_0_10px_rgba(152,255,217,0.8)]">
+                                <span
+                                    class="w-4 h-4 rounded-full bg-mint shadow-[0_0_15px_rgba(152,255,217,1)] shrink-0"></span>
+                                Higher Load — Same Regulation
+                            </div>
+                        </div>
                     </div>
 
                     <div class="mt-10 pt-6 border-t border-mint/10 text-center">
-                        <p class="text-mint font-black uppercase tracking-widest text-[10px] md:text-xs">Results — with compounding capacity</p>
+                        <p class="text-mint font-black uppercase tracking-widest text-[10px] md:text-xs">Results — with
+                            compounding capacity</p>
                     </div>
                 </div>
 
                 <!-- Graphic Trajectory B -->
-                <div id="compound-result-b" class="hidden opacity-0 translate-y-8 transition-all duration-700 ease-out mt-12 p-6 md:p-10 border border-red-500/20 rounded-[32px] relative overflow-hidden bg-gradient-to-b from-red-500/10 to-transparent shadow-[0_0_40px_rgba(255,77,77,0.05)]">
+                <div id="compound-result-b"
+                    class="hidden opacity-0 translate-y-8 transition-all duration-700 ease-out mt-12 p-6 md:p-10 border border-red-500/20 rounded-[32px] relative overflow-hidden bg-gradient-to-b from-red-500/10 to-transparent shadow-[0_0_40px_rgba(255,77,77,0.05)]">
                     <div class="text-center mb-10">
                         <h4 class="text-red-500 font-black text-xl md:text-2xl uppercase tracking-widest">Leader B</h4>
-                        <p class="text-white mt-1 font-medium text-sm md:text-base">The Silent Drain (Downward Spiral)</p>
+                        <p class="text-white mt-1 font-medium text-sm md:text-base">The Silent Drain (Downward Spiral)
+                        </p>
                     </div>
 
                     <div class="flex justify-center gap-4 md:gap-10 relative max-w-2xl mx-auto">
-                         <!-- Graphic Side -->
-                         <div class="w-10 md:w-16 relative flex flex-col justify-between py-2 items-center shrink-0">
-                             <div class="text-[8px] md:text-[9px] font-black tracking-widest text-red-500 uppercase absolute top-0 opacity-70">Start</div>
-                             <!-- Wavy abstract spiral line -->
-                             <svg viewBox="0 0 40 250" class="w-full h-[calc(100%-4rem)] text-red-500 opacity-40 absolute top-8" preserveAspectRatio="none">
-                                 <path d="M20,10 C40,50 0,90 20,130 C40,170 0,210 20,250" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                             </svg>
-                             <svg class="w-6 md:w-10 text-red-500 drop-shadow-[0_0_10px_rgba(255,77,77,0.8)] absolute bottom-0 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-                         </div>
+                        <!-- Graphic Side -->
+                        <div class="w-10 md:w-16 relative flex flex-col justify-between py-2 items-center shrink-0">
+                            <div
+                                class="text-[8px] md:text-[9px] font-black tracking-widest text-red-500 uppercase absolute top-0 opacity-70">
+                                Start</div>
+                            <!-- Wavy abstract spiral line -->
+                            <svg viewBox="0 0 40 250"
+                                class="w-full h-[calc(100%-4rem)] text-red-500 opacity-40 absolute top-8"
+                                preserveAspectRatio="none">
+                                <path d="M20,10 C40,50 0,90 20,130 C40,170 0,210 20,250" fill="none"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            <svg class="w-6 md:w-10 text-red-500 drop-shadow-[0_0_10px_rgba(255,77,77,0.8)] absolute bottom-0 animate-bounce"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
 
-                         <!-- Text Side (Normal DOM for Downward Scroll visual) -->
-                         <div class="flex flex-col gap-3 pt-6 pb-10">
-                             <!-- Step 1 (Rendered at Top) -->
-                             <div class="text-[20px] md:text-[22px] text-red-500 ml-0 flex items-center gap-3 font-black drop-shadow-[0_0_10px_rgba(255,77,77,0.8)]">
-                                 <span class="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_15px_rgba(255,77,77,1)] shrink-0"></span> Overload — Protection Mode Activates
-                             </div>
-                             <div class="text-[18px] md:text-[20px] text-white ml-1.5 md:ml-2 flex items-center gap-3 font-black drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">
-                                 <span class="w-3 h-3 rounded-full bg-red-500/90 shrink-0"></span> Bandwidth Splits — Task + Internal Stability
-                             </div>
-                             <div class="text-[17px] md:text-[18px] text-white ml-3 md:ml-4 flex items-center gap-3 font-bold">
-                                 <span class="w-2.5 h-2.5 rounded-full bg-red-500/80 shrink-0"></span> Discipline Overrides the Signal
-                             </div>
-                             <div class="text-[16px] md:text-[17px] text-white ml-4.5 md:ml-6 flex items-center gap-3 font-semibold">
-                                 <span class="w-2.5 h-2.5 rounded-full bg-red-500/70 shrink-0"></span> Higher Energy Cost, Same Output
-                             </div>
-                             <div class="text-[15px] md:text-[16px] text-zinc-100 ml-6 md:ml-8 flex items-center gap-3 font-medium">
-                                 <span class="w-2 h-2 rounded-full bg-orange-500/60 shrink-0"></span> Incomplete Recovery
-                             </div>
-                             <div class="text-[14px] md:text-[15px] text-zinc-200 ml-7.5 md:ml-10 flex items-center gap-3">
-                                 <span class="w-2 h-2 rounded-full bg-orange-500/50 shrink-0"></span> Baseline Shifts Down
-                             </div>
-                             <div class="text-[13px] md:text-[14px] text-zinc-300 ml-9 md:ml-12 flex items-center gap-3">
-                                 <span class="w-2 h-2 rounded-full bg-orange-500/40 shrink-0"></span> Friction Normalised — Feels Like Default
-                             </div>
-                             <div class="text-[12px] md:text-[13px] text-zinc-400 ml-10.5 md:ml-14 flex items-center gap-3">
-                                 <span class="w-1.5 h-1.5 rounded-full bg-orange-500/30 shrink-0"></span> Threshold Lowers — Less Takes More
-                             </div>
-                             <!-- Step 9 (Rendered at Bottom) -->
-                             <div class="text-[11px] md:text-[12px] text-zinc-500 ml-12 md:ml-16 flex items-center gap-3">
-                                 <span class="w-1.5 h-1.5 rounded-full bg-orange-500/20 shrink-0"></span> More Load, Less Capacity — Breakdown Inevitable
-                             </div>
-                         </div>
+                        <!-- Text Side (Normal DOM for Downward Scroll visual) -->
+                        <div class="flex flex-col gap-3 pt-6 pb-10">
+                            <!-- Step 1 (Rendered at Top) -->
+                            <div
+                                class="text-[20px] md:text-[22px] text-red-500 ml-0 flex items-center gap-3 font-black drop-shadow-[0_0_10px_rgba(255,77,77,0.8)]">
+                                <span
+                                    class="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_15px_rgba(255,77,77,1)] shrink-0"></span>
+                                Overload — Protection Mode Activates
+                            </div>
+                            <div
+                                class="text-[18px] md:text-[20px] text-white ml-1.5 md:ml-2 flex items-center gap-3 font-black drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">
+                                <span class="w-3 h-3 rounded-full bg-red-500/90 shrink-0"></span> Bandwidth Splits —
+                                Task + Internal Stability
+                            </div>
+                            <div
+                                class="text-[17px] md:text-[18px] text-white ml-3 md:ml-4 flex items-center gap-3 font-bold">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80 shrink-0"></span> Discipline
+                                Overrides the Signal
+                            </div>
+                            <div
+                                class="text-[16px] md:text-[17px] text-white ml-4.5 md:ml-6 flex items-center gap-3 font-semibold">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/70 shrink-0"></span> Higher Energy
+                                Cost, Same Output
+                            </div>
+                            <div
+                                class="text-[15px] md:text-[16px] text-zinc-100 ml-6 md:ml-8 flex items-center gap-3 font-medium">
+                                <span class="w-2 h-2 rounded-full bg-orange-500/60 shrink-0"></span> Incomplete Recovery
+                            </div>
+                            <div
+                                class="text-[14px] md:text-[15px] text-zinc-200 ml-7.5 md:ml-10 flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-orange-500/50 shrink-0"></span> Baseline Shifts
+                                Down
+                            </div>
+                            <div class="text-[13px] md:text-[14px] text-zinc-300 ml-9 md:ml-12 flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-orange-500/40 shrink-0"></span> Friction Normalised
+                                — Feels Like Default
+                            </div>
+                            <div
+                                class="text-[12px] md:text-[13px] text-zinc-400 ml-10.5 md:ml-14 flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-orange-500/30 shrink-0"></span> Threshold
+                                Lowers — Less Takes More
+                            </div>
+                            <!-- Step 9 (Rendered at Bottom) -->
+                            <div
+                                class="text-[11px] md:text-[12px] text-zinc-500 ml-12 md:ml-16 flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-orange-500/20 shrink-0"></span> More Load, Less
+                                Capacity — Breakdown Inevitable
+                            </div>
+                        </div>
                     </div>
 
                     <div class="mt-10 pt-6 border-t border-red-500/10 text-center">
-                        <p class="text-red-500 font-black uppercase tracking-widest text-[10px] md:text-xs mb-1.5">Results — with compounding cost.</p>
-                        <p class="text-red-400/80 text-[8px] md:text-[9px] uppercase tracking-widest font-bold">Loop uninterrupted, this ends one way.</p>
+                        <p class="text-red-500 font-black uppercase tracking-widest text-[10px] md:text-xs mb-1.5">
+                            Results — with compounding cost.</p>
+                        <p class="text-red-400/80 text-[8px] md:text-[9px] uppercase tracking-widest font-bold">Loop
+                            uninterrupted, this ends one way.</p>
                     </div>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div class="p-8 card-blur space-y-4"><h4 class="text-sm font-black text-white uppercase">Metabolically Expensive</h4><p class="text-zinc-400 text-sm leading-relaxed">Willpower and cognitive bandwidth are finite resources. Every time you override friction with discipline, you spend from a limited account that doesn't always replenish.</p></div>
-                <div class="p-8 card-blur space-y-4"><h4 class="text-sm font-black text-white uppercase">Structural Degradation</h4><p class="text-zinc-400 text-sm leading-relaxed">Chronic stress causes measurable <span class="text-red-400 font-bold">loss of connections in the prefrontal cortex</span>. This isn't fatigue. It's the degradation of the region governing strategic thinking.</p></div>
-                <div class="p-8 card-blur space-y-4"><h4 class="text-sm font-black text-white uppercase">Decision Quality Shift</h4><p class="text-zinc-400 text-sm leading-relaxed">Under protection mode, your brain prefers certainty over upside, defaults to proven patterns over optimal solutions. Subtly, but compoundingly reactive.</p></div>
-                <div class="p-8 card-blur space-y-4"><h4 class="text-sm font-black text-white uppercase">The Reinforcing Loop</h4><p class="text-zinc-400 text-sm leading-relaxed">Every time tension triggers action, the wiring strengthens. Eventually, it learns: <span class="text-white italic">no pressure = no ignition</span>. You need escalating stakes just to mobilise.</p></div>
+                <div class="p-8 card-blur space-y-4">
+                    <h4 class="text-sm font-black text-white uppercase">Metabolically Expensive</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Willpower and cognitive bandwidth are finite
+                        resources. Every time you override friction with discipline, you spend from a limited account
+                        that doesn't always replenish.</p>
+                </div>
+                <div class="p-8 card-blur space-y-4">
+                    <h4 class="text-sm font-black text-white uppercase">Structural Degradation</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Chronic stress causes measurable <span
+                            class="text-red-400 font-bold">loss of connections in the prefrontal cortex</span>. This
+                        isn't fatigue. It's the degradation of the region governing strategic thinking.</p>
+                </div>
+                <div class="p-8 card-blur space-y-4">
+                    <h4 class="text-sm font-black text-white uppercase">Decision Quality Shift</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Under protection mode, your brain prefers certainty
+                        over upside, defaults to proven patterns over optimal solutions. Subtly, but compoundingly
+                        reactive.</p>
+                </div>
+                <div class="p-8 card-blur space-y-4">
+                    <h4 class="text-sm font-black text-white uppercase">The Reinforcing Loop</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Every time tension triggers action, the wiring
+                        strengthens. Eventually, it learns: <span class="text-white italic">no pressure = no
+                            ignition</span>. You need escalating stakes just to mobilise.</p>
+                </div>
             </div>
-            
+
             <div class="text-center max-w-2xl mx-auto mt-12">
-                <p class="text-zinc-400 mb-4">And none of it shows up in any metric, no KPI. No quarterly review catches it.</p>
-                <p class="text-white font-medium italic leading-relaxed">"It accumulates silently until a decision misses badly, a relationship breaks, or health forces the conversation you kept postponing."</p>
+                <p class="text-zinc-400 mb-4">And none of it shows up in any metric, no KPI. No quarterly review catches
+                    it.</p>
+                <p class="text-white font-medium italic leading-relaxed">"It accumulates silently until a decision
+                    misses badly, a relationship breaks, or health forces the conversation you kept postponing."</p>
             </div>
         </section>
 
@@ -680,24 +950,37 @@
                 <span class="section-tag">Part 5</span>
                 <h2 class="text-4xl font-black mb-6">What's Actually Happening Inside</h2>
                 <p class="text-zinc-400">The mechanism that runs automatically in every high-stakes situation:</p>
-                <p class="text-zinc-500 text-xs tracking-widest uppercase mt-6 animate-pulse">Select a step below to reveal the internal architecture</p>
+                <p class="text-zinc-500 text-xs tracking-widest uppercase mt-6 animate-pulse">Select a step below to
+                    reveal the internal architecture</p>
             </div>
-            
+
             <div class="flex flex-col gap-4">
                 <!-- Step 1 -->
-                <div class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
-                    <button onclick="toggleStep('step1')" class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
+                <div
+                    class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
+                    <button onclick="toggleStep('step1')"
+                        class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
                         <div class="flex items-center gap-6 text-left">
-                            <div id="step1-badge" class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">01</div>
-                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Event Happens → <span class="text-zinc-400 font-bold">Neutral Data</span></div>
+                            <div id="step1-badge"
+                                class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">
+                                01</div>
+                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Event Happens → <span
+                                    class="text-zinc-400 font-bold">Neutral Data</span></div>
                         </div>
-                        <svg id="step1-chevron" class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg id="step1-chevron"
+                            class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div id="step1-content" class="expandable-content">
                         <div class="expandable-inner">
-                            <div class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
+                            <div
+                                class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
                                 <p class="text-white font-bold mb-2">Neutral data. Nothing more.</p>
-                                <p>A email lands. A meeting starts. A number changes. The event itself carries zero meaning — your system assigns it.</p>
+                                <p>A email lands. A meeting starts. A number changes. The event itself carries zero
+                                    meaning — your system assigns it.</p>
                             </div>
                         </div>
                     </div>
@@ -705,138 +988,223 @@
 
                 <!-- Step 2 -->
                 <div class="card-blur border-mint/40 bg-mint/5 overflow-hidden group">
-                    <button onclick="toggleStep('step2')" class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
+                    <button onclick="toggleStep('step2')"
+                        class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
                         <div class="flex items-center gap-6 text-left">
-                            <div id="step2-badge" class="w-8 h-8 rounded-full bg-mint text-black flex items-center justify-center text-[10px] font-black shrink-0">02</div>
-                            <div class="text-white uppercase tracking-widest text-xs font-black">Brain Labels It → <span class="text-mint italic underline underline-offset-4">Threat or Opportunity</span></div>
+                            <div id="step2-badge"
+                                class="w-8 h-8 rounded-full bg-mint text-black flex items-center justify-center text-[10px] font-black shrink-0">
+                                02</div>
+                            <div class="text-white uppercase tracking-widest text-xs font-black">Brain Labels It → <span
+                                    class="text-mint italic underline underline-offset-4">Threat or Opportunity</span>
+                            </div>
                         </div>
-                        <svg id="step2-chevron" class="w-5 h-5 text-mint transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg id="step2-chevron" class="w-5 h-5 text-mint transition-transform duration-300 shrink-0"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div id="step2-content" class="expandable-content">
                         <div class="expandable-inner">
-                            <div class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-mint/20 mt-2">
+                            <div
+                                class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-mint/20 mt-2">
                                 <p class="text-mint font-bold mb-2">Threat or opportunity — decided in milliseconds.</p>
-                                <p class="mb-3">Your brain is a prediction machine. Before conscious thought fires, it runs one calculation:<br/><span class="text-white font-medium">Perceived Threat vs Perceived Resources</span></p>
+                                <p class="mb-3">Your brain is a prediction machine. Before conscious thought fires, it
+                                    runs one calculation:<br /><span class="text-white font-medium">Perceived Threat vs
+                                        Perceived Resources</span></p>
                                 <ul class="space-y-2 mb-4 bg-black/20 p-4 rounded-xl">
-                                    <li><span class="text-mint font-bold">→</span> Resources > Threat: labelled opportunity. System mobilises cleanly.</li>
-                                    <li><span class="text-red-400 font-bold">→</span> Threat > Resources: labelled danger. Protection mode activates.</li>
+                                    <li><span class="text-mint font-bold">→</span> Resources > Threat: labelled
+                                        opportunity. System mobilises cleanly.</li>
+                                    <li><span class="text-red-400 font-bold">→</span> Threat > Resources: labelled
+                                        danger. Protection mode activates.</li>
                                 </ul>
-                                <p class="text-white italic">The intensity of the label determines everything downstream.</p>
+                                <p class="text-white italic">The intensity of the label determines everything
+                                    downstream.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
-                    <button onclick="toggleStep('step3')" class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
+                <div
+                    class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
+                    <button onclick="toggleStep('step3')"
+                        class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
                         <div class="flex items-center gap-6 text-left">
-                            <div id="step3-badge" class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">03</div>
-                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Label Triggers → <span class="text-zinc-400 font-bold">Emotion (Fear or Mobilisation)</span></div>
+                            <div id="step3-badge"
+                                class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">
+                                03</div>
+                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Label Triggers → <span
+                                    class="text-zinc-400 font-bold">Emotion (Fear or Mobilisation)</span></div>
                         </div>
-                        <svg id="step3-chevron" class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg id="step3-chevron"
+                            class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div id="step3-content" class="expandable-content">
                         <div class="expandable-inner">
-                            <div class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
+                            <div
+                                class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
                                 <p class="text-white font-bold mb-2">Not a feeling. A biological event.</p>
-                                <p class="mb-3">The label fires a chemical response proportional to the intensity of the threat calculation.</p>
+                                <p class="mb-3">The label fires a chemical response proportional to the intensity of the
+                                    threat calculation.</p>
                                 <ul class="space-y-2 mb-4 bg-black/20 p-4 rounded-xl">
-                                    <li><span class="text-mint font-bold">→ Clean label:</span> adrenaline + dopamine. Sharp, focused, energised.</li>
-                                    <li><span class="text-red-400 font-bold">→ Threat label:</span> cortisol + adrenaline. Narrowed, vigilant, split.</li>
+                                    <li><span class="text-mint font-bold">→ Clean label:</span> adrenaline + dopamine.
+                                        Sharp, focused, energised.</li>
+                                    <li><span class="text-red-400 font-bold">→ Threat label:</span> cortisol +
+                                        adrenaline. Narrowed, vigilant, split.</li>
                                 </ul>
-                                <p class="italic text-zinc-300">You don't choose the emotion. The label chose it for you — 200 milliseconds ago.</p>
+                                <p class="italic text-zinc-300">You don't choose the emotion. The label chose it for you
+                                    — 200 milliseconds ago.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
-                    <button onclick="toggleStep('step4')" class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
+                <div
+                    class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
+                    <button onclick="toggleStep('step4')"
+                        class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
                         <div class="flex items-center gap-6 text-left">
-                            <div id="step4-badge" class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">04</div>
-                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Emotion Triggers → <span class="text-zinc-400 font-bold">Thought Patterns (Noise or Problem Solving)</span></div>
+                            <div id="step4-badge"
+                                class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">
+                                04</div>
+                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Emotion Triggers → <span
+                                    class="text-zinc-400 font-bold">Thought Patterns (Noise or Problem Solving)</span>
+                            </div>
                         </div>
-                        <svg id="step4-chevron" class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg id="step4-chevron"
+                            class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div id="step4-content" class="expandable-content">
                         <div class="expandable-inner">
-                            <div class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
+                            <div
+                                class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
                                 <p class="text-white font-bold mb-3">Your state of being is now set.</p>
                                 <ul class="space-y-2 mb-4 bg-black/20 p-4 rounded-xl">
-                                    <li><span class="text-blue-400 font-bold">→ Underload:</span> flat, under-stimulated, creative bandwidth open</li>
-                                    <li><span class="text-mint font-bold">→ Challenge zone:</span> fully mobilised, sharp, all resources on the task</li>
-                                    <li><span class="text-red-400 font-bold">→ Overload/Protection:</span> bandwidth split — part on the task, part managing the internal threat</li>
+                                    <li><span class="text-blue-400 font-bold">→ Underload:</span> flat,
+                                        under-stimulated, creative bandwidth open</li>
+                                    <li><span class="text-mint font-bold">→ Challenge zone:</span> fully mobilised,
+                                        sharp, all resources on the task</li>
+                                    <li><span class="text-red-400 font-bold">→ Overload/Protection:</span> bandwidth
+                                        split — part on the task, part managing the internal threat</li>
                                 </ul>
-                                <p class="mb-2">Thought patterns follow the zone automatically. Challenge zone generates thoughts that push forward. Protection mode generates thoughts that protect.</p>
-                                <p class="text-zinc-300 italic">You experience both as "just thinking" — they're not the same thing.</p>
+                                <p class="mb-2">Thought patterns follow the zone automatically. Challenge zone generates
+                                    thoughts that push forward. Protection mode generates thoughts that protect.</p>
+                                <p class="text-zinc-300 italic">You experience both as "just thinking" — they're not the
+                                    same thing.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Step 5 -->
-                <div class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
-                    <button onclick="toggleStep('step5')" class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
+                <div
+                    class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
+                    <button onclick="toggleStep('step5')"
+                        class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
                         <div class="flex items-center gap-6 text-left">
-                            <div id="step5-badge" class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">05</div>
-                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Thoughts Trigger → <span class="text-zinc-400 font-bold">Actions (Reactive or Focused)</span></div>
+                            <div id="step5-badge"
+                                class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">
+                                05</div>
+                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Thoughts Trigger → <span
+                                    class="text-zinc-400 font-bold">Actions (Reactive or Focused)</span></div>
                         </div>
-                        <svg id="step5-chevron" class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg id="step5-chevron"
+                            class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div id="step5-content" class="expandable-content">
                         <div class="expandable-inner">
-                            <div class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
+                            <div
+                                class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
                                 <p class="text-white font-bold mb-4">Two very different engines.</p>
                                 <div class="space-y-4">
                                     <div class="p-3 bg-mint/5 border-l-2 border-mint rounded-r-lg">
-                                        <span class="text-mint font-bold block mb-1">Challenge zone:</span> 
-                                        thoughts accelerate execution. Clarity → decision → movement. Low internal resistance.
+                                        <span class="text-mint font-bold block mb-1">Challenge zone:</span>
+                                        thoughts accelerate execution. Clarity → decision → movement. Low internal
+                                        resistance.
                                     </div>
                                     <div class="p-3 bg-red-500/5 border-l-2 border-red-500 rounded-r-lg">
-                                        <span class="text-red-400 font-bold block mb-1">Protection mode:</span> 
-                                        thoughts create friction. Most leaders override this with willpower and discipline — and it works. But it costs.
+                                        <span class="text-red-400 font-bold block mb-1">Protection mode:</span>
+                                        thoughts create friction. Most leaders override this with willpower and
+                                        discipline — and it works. But it costs.
                                     </div>
                                 </div>
-                                <p class="mt-4 text-white italic">You're running the task and fighting your own system simultaneously. High output, high burn rate.</p>
+                                <p class="mt-4 text-white italic">You're running the task and fighting your own system
+                                    simultaneously. High output, high burn rate.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Step 6 -->
-                <div class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
-                    <button onclick="toggleStep('step6')" class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
+                <div
+                    class="card-blur border-transparent hover:border-mint/30 transition-colors duration-300 overflow-hidden group">
+                    <button onclick="toggleStep('step6')"
+                        class="w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
                         <div class="flex items-center gap-6 text-left">
-                            <div id="step6-badge" class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">06</div>
-                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Actions Create → <span class="text-zinc-400 font-bold">Outcomes</span></div>
+                            <div id="step6-badge"
+                                class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300">
+                                06</div>
+                            <div class="text-zinc-500 uppercase tracking-widest text-xs">Actions Create → <span
+                                    class="text-zinc-400 font-bold">Outcomes</span></div>
                         </div>
-                        <svg id="step6-chevron" class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg id="step6-chevron"
+                            class="w-5 h-5 text-zinc-500 transition-transform duration-300 shrink-0 group-hover:text-mint"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div id="step6-content" class="expandable-content">
                         <div class="expandable-inner">
-                            <div class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
+                            <div
+                                class="expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t border-white/5 mt-2">
                                 <p class="text-white font-bold mb-2">The loop closes — and strengthens.</p>
-                                <p class="mb-3">Whatever you just ran, your system files as the validated response to that type of event.</p>
+                                <p class="mb-3">Whatever you just ran, your system files as the validated response to
+                                    that type of event.</p>
                                 <ul class="space-y-2 mb-5">
-                                    <li><span class="text-mint font-bold">→ Ran it clean:</span> pattern strengthens toward challenge zone next time.</li>
-                                    <li><span class="text-orange-400 font-bold">→ Ran it through willpower:</span> pattern strengthens the dependency on discipline to override friction.</li>
-                                    <li><span class="text-red-500 font-bold">→ Ran it in protection mode repeatedly:</span> system normalises protection as the default. Baseline shifts.</li>
+                                    <li><span class="text-mint font-bold">→ Ran it clean:</span> pattern strengthens
+                                        toward challenge zone next time.</li>
+                                    <li><span class="text-orange-400 font-bold">→ Ran it through willpower:</span>
+                                        pattern strengthens the dependency on discipline to override friction.</li>
+                                    <li><span class="text-red-500 font-bold">→ Ran it in protection mode
+                                            repeatedly:</span> system normalises protection as the default. Baseline
+                                        shifts.</li>
                                 </ul>
                                 <div class="p-4 bg-white/5 border border-white/10 rounded-xl relative overflow-hidden">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-mint/5 to-transparent pointer-events-none"></div>
-                                    <p class="text-zinc-300 text-sm mb-3 relative z-10">If no conscious feedback is given — the body decides automatically. It assumes whatever just happened is what you wanted. Pattern reinforces. Runs stronger next time.</p>
-                                    <p class="text-mint font-black text-[10px] uppercase tracking-widest relative z-10">Where attention goes, energy flows.</p>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-mint/5 to-transparent pointer-events-none">
+                                    </div>
+                                    <p class="text-zinc-300 text-sm mb-3 relative z-10">If no conscious feedback is
+                                        given — the body decides automatically. It assumes whatever just happened is
+                                        what you wanted. Pattern reinforces. Runs stronger next time.</p>
+                                    <p class="text-mint font-black text-[10px] uppercase tracking-widest relative z-10">
+                                        Where attention goes, energy flows.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <p class="text-zinc-300 leading-relaxed mt-8 p-6 bg-zinc-900/40 rounded-3xl border border-white/5">
-                Most interventions try to work at <span class="text-white font-bold">Step 5</span> (Willpower, Discipline). It works, but you're fighting a current your own system already created. <span class="text-white italic font-bold">The calculation at Step 2 is the only thing that changes the cascade.</span>
+                Most interventions try to work at <span class="text-white font-bold">Step 5</span> (Willpower,
+                Discipline). It works, but you're fighting a current your own system already created. <span
+                    class="text-white italic font-bold">The calculation at Step 2 is the only thing that changes the
+                    cascade.</span>
             </p>
         </section>
 
@@ -854,51 +1222,78 @@
                 <div class="grid md:grid-cols-2 gap-4 max-w-2xl">
                     <div class="p-5 bg-zinc-900/50 rounded-2xl border border-white/5 text-sm flex items-center gap-4">
                         <div class="w-2 h-2 rounded-full bg-zinc-600 shrink-0"></div>
-                        <div><span class="text-zinc-500 font-bold">Low tension</span> <span class="text-zinc-400">→ Low activation → Feels unproductive</span></div>
+                        <div><span class="text-zinc-500 font-bold">Low tension</span> <span class="text-zinc-400">→ Low
+                                activation → Feels unproductive</span></div>
                     </div>
                     <div class="p-5 bg-mint/5 rounded-2xl border border-mint/20 text-sm flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-full bg-mint shrink-0 shadow-[0_0_10px_rgba(152,255,217,0.8)]"></div>
-                        <div><span class="text-mint font-bold">High tension</span> <span class="text-white font-medium">→ Full engagement → Feels like real work</span></div>
+                        <div class="w-2 h-2 rounded-full bg-mint shrink-0 shadow-[0_0_10px_rgba(152,255,217,0.8)]">
+                        </div>
+                        <div><span class="text-mint font-bold">High tension</span> <span
+                                class="text-white font-medium">→ Full engagement → Feels like real work</span></div>
                     </div>
                 </div>
-                <p>When things are calm, it feels like something's missing. When the stakes rise, you come alive. You probably call that drive. It's actually conditioning - and there's a difference.</p>
-                <p class="text-mint font-bold italic">The consequence: internal amplification gets layered on top of real pressure.</p>
+                <p>When things are calm, it feels like something's missing. When the stakes rise, you come alive. You
+                    probably call that drive. It's actually conditioning - and there's a difference.</p>
+                <p class="text-mint font-bold italic">The consequence: internal amplification gets layered on top of
+                    real pressure.</p>
             </div>
 
             <!-- Observation Graphic -->
             <div class="relative p-8 md:p-10 rounded-[32px] border border-dashed border-zinc-600 bg-zinc-900/20 mt-12">
-                <div class="absolute -top-3 left-8 bg-[#050505] px-4 text-[10px] font-black tracking-widest text-zinc-500 uppercase flex items-center gap-2 border border-zinc-800 rounded-full">
-                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                <div
+                    class="absolute -top-3 left-8 bg-[#050505] px-4 text-[10px] font-black tracking-widest text-zinc-500 uppercase flex items-center gap-2 border border-zinc-800 rounded-full">
+                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                        </path>
+                    </svg>
                     Observation
                 </div>
                 <p class="text-zinc-300 text-lg leading-relaxed font-medium">
-                    The deadlines are real. The stakes are high, that's not the point. But if you watch closely, there's a consistent gap between <span class="text-white italic">what a situation objectively requires</span> and <span class="text-white italic">how much internal processing it generates.</span>
+                    The deadlines are real. The stakes are high, that's not the point. But if you watch closely, there's
+                    a consistent gap between <span class="text-white italic">what a situation objectively
+                        requires</span> and <span class="text-white italic">how much internal processing it
+                        generates.</span>
                 </p>
             </div>
 
             <!-- Connected Cards -->
             <div class="grid md:grid-cols-2 gap-8 mt-16 items-stretch relative">
-                
+
                 <!-- Connector Arrow (Desktop) -->
-                <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 items-center justify-center z-10 text-mint drop-shadow-[0_0_8px_rgba(152,255,217,0.5)]">
-                    <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <div
+                    class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 items-center justify-center z-10 text-mint drop-shadow-[0_0_8px_rgba(152,255,217,0.5)]">
+                    <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                 </div>
 
                 <!-- Normal Condition -->
-                <div class="p-8 md:p-10 bg-zinc-900/40 rounded-[32px] border border-white/5 flex flex-col justify-center shadow-lg relative z-0">
+                <div
+                    class="p-8 md:p-10 bg-zinc-900/40 rounded-[32px] border border-white/5 flex flex-col justify-center shadow-lg relative z-0">
                     <p class="text-zinc-500 uppercase tracking-widest text-[10px] font-black mb-6">Normal Condition</p>
                     <p class="text-white font-bold italic text-2xl mb-4">"I can't switch off."</p>
-                    <p class="text-zinc-400 text-sm leading-relaxed">You don't mean you can't stop thinking. You mean you can't stop the <span class="text-white font-bold">automated thought generation</span> the system has built under pressure.</p>
+                    <p class="text-zinc-400 text-sm leading-relaxed">You don't mean you can't stop thinking. You mean
+                        you can't stop the <span class="text-white font-bold">automated thought generation</span> the
+                        system has built under pressure.</p>
                 </div>
-                
+
                 <!-- Crossfade Card: Core Distinction -->
                 <div class="w-full min-h-[320px] relative z-0">
-                    <div id="distinction-container" class="w-full h-full relative p-8 md:p-10 card-blur border-mint/20 flex flex-col shadow-[0_0_30px_rgba(152,255,217,0.05)] distinction-transition">
-                        
+                    <div id="distinction-container"
+                        class="w-full h-full relative p-8 md:p-10 card-blur border-mint/20 flex flex-col shadow-[0_0_30px_rgba(152,255,217,0.05)] distinction-transition">
+
                         <!-- Header (Dynamic color) -->
                         <div class="flex justify-between items-center mb-6 shrink-0">
-                            <p id="distinction-label" class="text-mint uppercase tracking-widest text-[10px] font-black distinction-transition">The Core Distinction</p>
-                            <div id="distinction-counter" class="bg-black/50 px-3 py-1 rounded-full border border-white/10 text-zinc-400 text-[10px] font-black tracking-widest distinction-transition">1 / 2</div>
+                            <p id="distinction-label"
+                                class="text-mint uppercase tracking-widest text-[10px] font-black distinction-transition">
+                                The Core Distinction</p>
+                            <div id="distinction-counter"
+                                class="bg-black/50 px-3 py-1 rounded-full border border-white/10 text-zinc-400 text-[10px] font-black tracking-widest distinction-transition">
+                                1 / 2</div>
                         </div>
 
                         <!-- Content Area -->
@@ -906,21 +1301,31 @@
                             <!-- Thinking Content -->
                             <div id="content-thinking" class="absolute inset-0 distinction-transition opacity-100 z-10">
                                 <h4 class="text-white font-black text-2xl mb-4">Thinking</h4>
-                                <p class="text-zinc-300 text-sm leading-relaxed"><span class="text-mint font-bold">→ Thinking is conscious and directed.</span> You apply it to a problem and stop. It has an off switch.</p>
+                                <p class="text-zinc-300 text-sm leading-relaxed"><span class="text-mint font-bold">→
+                                        Thinking is conscious and directed.</span> You apply it to a problem and stop.
+                                    It has an off switch.</p>
                             </div>
-                            
+
                             <!-- Thoughts Content -->
-                            <div id="content-thoughts" class="absolute inset-0 distinction-transition opacity-0 pointer-events-none z-0">
+                            <div id="content-thoughts"
+                                class="absolute inset-0 distinction-transition opacity-0 pointer-events-none z-0">
                                 <h4 class="text-white font-black text-2xl mb-4">Thoughts</h4>
-                                <p class="text-zinc-300 text-sm leading-relaxed"><span class="text-red-500 font-bold">→ Thoughts are automated</span> - the byproduct of patterns your system has built over the years. The background self-assessment runs on every task.</p>
+                                <p class="text-zinc-300 text-sm leading-relaxed"><span class="text-red-500 font-bold">→
+                                        Thoughts are automated</span> - the byproduct of patterns your system has built
+                                    over the years. The background self-assessment runs on every task.</p>
                             </div>
                         </div>
-                        
+
                         <!-- Toggle Switch UI -->
                         <div class="mt-8 flex justify-between items-center border-t border-white/5 pt-6 z-20 shrink-0">
-                            <span id="toggle-label" class="text-[10px] font-black text-zinc-500 uppercase tracking-widest distinction-transition">Flip to Thoughts</span>
-                            <button onclick="toggleDistinction()" id="distinction-toggle" class="w-14 h-7 rounded-full bg-zinc-800 relative p-1 focus:outline-none distinction-transition cursor-pointer ring-1 ring-white/10">
-                                <div id="toggle-thumb" class="w-5 h-5 rounded-full bg-mint shadow-[0_0_8px_rgba(152,255,217,0.8)] absolute left-1 top-1 transition-all duration-500 translate-x-0"></div>
+                            <span id="toggle-label"
+                                class="text-[10px] font-black text-zinc-500 uppercase tracking-widest distinction-transition">Flip
+                                to Thoughts</span>
+                            <button onclick="toggleDistinction()" id="distinction-toggle"
+                                class="w-14 h-7 rounded-full bg-zinc-800 relative p-1 focus:outline-none distinction-transition cursor-pointer ring-1 ring-white/10">
+                                <div id="toggle-thumb"
+                                    class="w-5 h-5 rounded-full bg-mint shadow-[0_0_8px_rgba(152,255,217,0.8)] absolute left-1 top-1 transition-all duration-500 translate-x-0">
+                                </div>
                             </button>
                         </div>
                     </div>
@@ -929,20 +1334,36 @@
 
             <!-- New Post-Card Explanations -->
             <div class="mt-16 max-w-3xl mx-auto text-center space-y-4">
-                <p class="text-xl md:text-2xl font-bold text-white leading-relaxed">The problem isn't that you think too much.</p>
-                <p class="text-zinc-400 leading-relaxed md:text-lg">The problem is that your system is generating noise you didn't commission, consuming bandwidth, splitting attention, adding internal load to every task, and most of it produces nothing useful.</p>
+                <p class="text-xl md:text-2xl font-bold text-white leading-relaxed">The problem isn't that you think too
+                    much.</p>
+                <p class="text-zinc-400 leading-relaxed md:text-lg">The problem is that your system is generating noise
+                    you didn't commission, consuming bandwidth, splitting attention, adding internal load to every task,
+                    and most of it produces nothing useful.</p>
             </div>
-            
-            <div class="mt-16 p-8 md:p-10 rounded-[32px] border border-white/5 bg-gradient-to-b from-zinc-900/40 to-transparent relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-zinc-600 to-transparent opacity-50"></div>
+
+            <div
+                class="mt-16 p-8 md:p-10 rounded-[32px] border border-white/5 bg-gradient-to-b from-zinc-900/40 to-transparent relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-zinc-600 to-transparent opacity-50">
+                </div>
                 <div class="flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left">
-                    <div class="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center shrink-0 border border-white/10 shadow-lg">
-                        <svg class="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <div
+                        class="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center shrink-0 border border-white/10 shadow-lg">
+                        <svg class="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
                     </div>
                     <div class="space-y-4">
-                        <p class="text-white font-medium text-lg">One more thing, your physical health sets the baseline for all of this; sleep, training, and nutrition directly affect your perceived resources.</p>
-                        <p class="text-zinc-400 text-sm">A depleted system tips into protection mode at a lower threshold. But this document isn't about that.</p>
-                        <p class="text-mint font-medium text-sm italic pt-4 border-t border-white/5 inline-block w-full">This is about what's happening even when you're physically dialled in, and the friction is still there.</p>
+                        <p class="text-white font-medium text-lg">One more thing, your physical health sets the baseline
+                            for all of this; sleep, training, and nutrition directly affect your perceived resources.
+                        </p>
+                        <p class="text-zinc-400 text-sm">A depleted system tips into protection mode at a lower
+                            threshold. But this document isn't about that.</p>
+                        <p
+                            class="text-mint font-medium text-sm italic pt-4 border-t border-white/5 inline-block w-full">
+                            This is about what's happening even when you're physically dialled in, and the friction is
+                            still there.</p>
                     </div>
                 </div>
             </div>
@@ -959,82 +1380,126 @@
 
         <!-- Part 7 -->
         <section class="mb-32 space-y-12">
-            <div><span class="section-tag">Part 7</span><h2 class="text-4xl font-black mb-6">The Energy Cost</h2><p class="text-zinc-400 italic">"Two identical lorries. Same load. Same destination. Same route."</p></div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-10 card-blur border-mint/20"><div class="text-mint text-xs font-black uppercase mb-4 tracking-widest">Lorry A (Challenge)</div><p class="text-zinc-400 text-sm leading-relaxed">Runs on a well-maintained engine at the right gear. Fuel burns efficiently. Everything goes toward moving the load forward.</p></div>
-                <div class="p-10 card-blur border-red-500/20"><div class="text-red-500 text-xs font-black uppercase mb-4 tracking-widest">Lorry B (Protection)</div><p class="text-zinc-400 text-sm leading-relaxed">A gear too low. Engine working harder. Temp higher. Fuel burning faster. Needs significantly longer in the depot before it can run again.</p></div>
+            <div><span class="section-tag">Part 7</span>
+                <h2 class="text-4xl font-black mb-6">The Energy Cost</h2>
+                <p class="text-zinc-400 italic">"Two identical lorries. Same load. Same destination. Same route."</p>
             </div>
-            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-10 card-blur border-mint/20">
+                    <div class="text-mint text-xs font-black uppercase mb-4 tracking-widest">Lorry A (Challenge)</div>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Runs on a well-maintained engine at the right gear.
+                        Fuel burns efficiently. Everything goes toward moving the load forward.</p>
+                </div>
+                <div class="p-10 card-blur border-red-500/20">
+                    <div class="text-red-500 text-xs font-black uppercase mb-4 tracking-widest">Lorry B (Protection)
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed">A gear too low. Engine working harder. Temp higher.
+                        Fuel burning faster. Needs significantly longer in the depot before it can run again.</p>
+                </div>
+            </div>
+
             <div class="space-y-10 pt-8">
                 <div class="text-center">
                     <h3 class="text-3xl font-black text-white">The Real Cost of Protection Mode</h3>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-8 items-start">
                     <!-- Short-Term Cost Card -->
                     <div class="p-8 md:p-10 card-blur border-orange-500/20 relative overflow-hidden group h-full">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500/50 to-transparent"></div>
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500/50 to-transparent">
+                        </div>
                         <h4 class="text-2xl font-black text-white mb-1">Short-Term Cost</h4>
                         <p class="text-orange-400 text-xs font-bold uppercase tracking-widest mb-8">In the moment</p>
-                        
+
                         <ul class="space-y-6">
                             <li class="flex gap-4">
                                 <span class="text-orange-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Perception Narrows</span><span class="text-zinc-400 text-sm leading-relaxed">Attention locks on the threat. Lateral options and opportunities drop out of view.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Perception Narrows</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">Attention locks on the threat.
+                                        Lateral options and opportunities drop out of view.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-orange-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Chemical Imbalance</span><span class="text-zinc-400 text-sm leading-relaxed">Cortisol fires. Your system burns resource just stabilising itself before it touches the actual task.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Chemical Imbalance</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">Cortisol fires. Your system burns
+                                        resource just stabilising itself before it touches the actual task.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-orange-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Internal Latency</span><span class="text-zinc-400 text-sm leading-relaxed">Micro-hesitation, self-monitoring, background commentary. All running parallel to the work.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Internal Latency</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">Micro-hesitation, self-monitoring,
+                                        background commentary. All running parallel to the work.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-orange-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Decision Quality Degrades</span><span class="text-zinc-400 text-sm leading-relaxed">Brain defaults to safe and familiar over optimal. Every time, in this state.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Decision Quality Degrades</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">Brain defaults to safe and
+                                        familiar over optimal. Every time, in this state.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-orange-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Risk Tolerance Tightens</span><span class="text-zinc-400 text-sm leading-relaxed">More hedging. Fewer bold calls. None of it feels like fear. All of it is.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Risk Tolerance Tightens</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">More hedging. Fewer bold calls.
+                                        None of it feels like fear. All of it is.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-orange-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Mental Drain</span><span class="text-zinc-400 text-sm leading-relaxed">You finish depleted not just from the work — but from managing yourself through it.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Mental Drain</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">You finish depleted not just from
+                                        the work — but from managing yourself through it.</span></div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Long-Term Cost Card -->
                     <div class="p-8 md:p-10 card-blur border-red-600/20 relative overflow-hidden group h-full">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600/50 to-transparent"></div>
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600/50 to-transparent">
+                        </div>
                         <h4 class="text-2xl font-black text-white mb-1">Long-Term Cost</h4>
-                        <p class="text-red-500 text-xs font-bold uppercase tracking-widest mb-8">What compounds if nothing changes</p>
-                        
+                        <p class="text-red-500 text-xs font-bold uppercase tracking-widest mb-8">What compounds if
+                            nothing changes</p>
+
                         <ul class="space-y-6">
                             <li class="flex gap-4">
                                 <span class="text-red-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Stress Contagion</span><span class="text-zinc-400 text-sm leading-relaxed">Your state is not private. Your team absorbs it before you speak.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Stress Contagion</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">Your state is not private. Your
+                                        team absorbs it before you speak.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-red-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Calmness Feels Threatening</span><span class="text-zinc-400 text-sm leading-relaxed">Years of tension-based activation wire the system to need pressure just to feel productive.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Calmness Feels
+                                        Threatening</span><span class="text-zinc-400 text-sm leading-relaxed">Years of
+                                        tension-based activation wire the system to need pressure just to feel
+                                        productive.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-red-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Stress Response Sensitises</span><span class="text-zinc-400 text-sm leading-relaxed">The threshold lowers every year. What needed a crisis at 35 fires on an email at 45.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Stress Response
+                                        Sensitises</span><span class="text-zinc-400 text-sm leading-relaxed">The
+                                        threshold lowers every year. What needed a crisis at 35 fires on an email at
+                                        45.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-red-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Structural Hardware Degradation</span><span class="text-zinc-400 text-sm leading-relaxed">Chronic stress measurably shrinks prefrontal cortex connections. The part that makes you effective. Structurally.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Structural Hardware
+                                        Degradation</span><span class="text-zinc-400 text-sm leading-relaxed">Chronic
+                                        stress measurably shrinks prefrontal cortex connections. The part that makes you
+                                        effective. Structurally.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-red-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Cardiovascular Risk</span><span class="text-zinc-400 text-sm leading-relaxed">Sustained cortisol scars arteries. Executives face 2–3x higher risk of heart attack and stroke.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Cardiovascular Risk</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">Sustained cortisol scars arteries.
+                                        Executives face 2–3x higher risk of heart attack and stroke.</span></div>
                             </li>
                             <li class="flex gap-4">
                                 <span class="text-red-500 font-bold shrink-0 mt-0.5">→</span>
-                                <div><span class="text-white font-bold block mb-1">Depression Risk Compounds</span><span class="text-zinc-400 text-sm leading-relaxed">Leaders are 2x more likely to develop depression. High-achievers, 4x. The same pattern that built the career breaks the person running it.</span></div>
+                                <div><span class="text-white font-bold block mb-1">Depression Risk Compounds</span><span
+                                        class="text-zinc-400 text-sm leading-relaxed">Leaders are 2x more likely to
+                                        develop depression. High-achievers, 4x. The same pattern that built the career
+                                        breaks the person running it.</span></div>
                             </li>
                         </ul>
                     </div>
@@ -1050,66 +1515,101 @@
             </div>
 
             <div class="space-y-6 text-zinc-300 text-lg leading-relaxed max-w-3xl">
-                <p>Every time you've looked for a solution, someone handed you a productivity hack, a breathing exercise, or told you to slow down.</p>
+                <p>Every time you've looked for a solution, someone handed you a productivity hack, a breathing
+                    exercise, or told you to slow down.</p>
                 <p>Quick relief. Genuinely. For small friction, it works.</p>
-                <p>But when you're in the trenches — real pressure, real stakes, the loop that won't stop at 2am — none of it touches it. You've probably already proven that to yourself.</p>
-                <p>That's not a failure of discipline. Those tools are built for a different problem. <span class="text-white font-bold">Handing box-breathing to someone whose nervous system is running a survival calculation is like giving a painkiller to someone mid-surgery.</span> It numbs the surface. The operation is still happening underneath.</p>
-                
-                <div class="p-6 md:p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl italic text-zinc-300 my-8 shadow-[0_5px_20px_rgba(0,0,0,0.2)]">
-                    "I know this because I took everything I used to give clients and applied it to myself at the worst point of my life. It lasted five minutes. Then the weight came back heavier. The tools weren't wrong. They were just aimed at the symptom, not the architecture generating it."
+                <p>But when you're in the trenches — real pressure, real stakes, the loop that won't stop at 2am — none
+                    of it touches it. You've probably already proven that to yourself.</p>
+                <p>That's not a failure of discipline. Those tools are built for a different problem. <span
+                        class="text-white font-bold">Handing box-breathing to someone whose nervous system is running a
+                        survival calculation is like giving a painkiller to someone mid-surgery.</span> It numbs the
+                    surface. The operation is still happening underneath.</p>
+
+                <div
+                    class="p-6 md:p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl italic text-zinc-300 my-8 shadow-[0_5px_20px_rgba(0,0,0,0.2)]">
+                    "I know this because I took everything I used to give clients and applied it to myself at the worst
+                    point of my life. It lasted five minutes. Then the weight came back heavier. The tools weren't
+                    wrong. They were just aimed at the symptom, not the architecture generating it."
                 </div>
-                
-                <p class="text-white font-black text-xl md:text-2xl pt-4">You don't need another protocol. You need to understand the mechanism that's been running you under pressure.</p>
+
+                <p class="text-white font-black text-xl md:text-2xl pt-4">You don't need another protocol. You need to
+                    understand the mechanism that's been running you under pressure.</p>
             </div>
 
-            <div class="p-8 md:p-12 bg-mint/5 border border-mint/20 rounded-[40px] mt-12 shadow-[0_0_30px_rgba(152,255,217,0.05)]">
+            <div
+                class="p-8 md:p-12 bg-mint/5 border border-mint/20 rounded-[40px] mt-12 shadow-[0_0_30px_rgba(152,255,217,0.05)]">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black">01</div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black">
+                            01</div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-xs">Map the Trigger</h4>
-                        <p class="text-zinc-500 text-xs leading-relaxed">What specifically fires the protection response in you.</p>
+                        <p class="text-zinc-500 text-xs leading-relaxed">What specifically fires the protection response
+                            in you.</p>
                     </div>
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black">02</div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black">
+                            02</div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-xs">Map the Pattern</h4>
-                        <p class="text-zinc-500 text-xs leading-relaxed">What the system does when that trigger fires.</p>
+                        <p class="text-zinc-500 text-xs leading-relaxed">What the system does when that trigger fires.
+                        </p>
                     </div>
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black">03</div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black">
+                            03</div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-xs">Map the Cost</h4>
-                        <p class="text-zinc-500 text-xs leading-relaxed">What it consumes, what it blocks, what it delays.</p>
+                        <p class="text-zinc-500 text-xs leading-relaxed">What it consumes, what it blocks, what it
+                            delays.</p>
                     </div>
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black shadow-[0_0_15px_rgba(152,255,217,0.5)]">04</div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black shadow-[0_0_15px_rgba(152,255,217,0.5)]">
+                            04</div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-xs">Replace the Pattern</h4>
-                        <p class="text-zinc-500 text-xs leading-relaxed">Install one that doesn't split your bandwidth.</p>
+                        <p class="text-zinc-500 text-xs leading-relaxed">Install one that doesn't split your bandwidth.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="space-y-8 pt-8 max-w-4xl">
                 <div class="text-xl md:text-2xl text-white font-medium leading-relaxed">
-                    Every leader, athlete, high-performer is limited by the same thing: <span class="text-mint font-bold">their own system.</span>
+                    Every leader, athlete, high-performer is limited by the same thing: <span
+                        class="text-mint font-bold">their own system.</span>
                 </div>
-                <p class="text-zinc-400 text-lg">Same architecture. Same mechanism. Different intensity, different triggers, different stakes. That's it.</p>
-                
+                <p class="text-zinc-400 text-lg">Same architecture. Same mechanism. Different intensity, different
+                    triggers, different stakes. That's it.</p>
+
                 <div class="h-px w-full bg-gradient-to-r from-mint/50 to-transparent my-10 opacity-20"></div>
-                
+
                 <p class="text-xl text-white font-bold">You already have everything the solution requires.</p>
-                
-                <div class="relative text-lg leading-relaxed text-zinc-300 mt-6 bg-zinc-900/30 p-8 pb-14 rounded-3xl border border-white/5">
-                    <span class="inline-block px-4 py-2 bg-mint/10 border border-mint/50 text-mint font-bold rounded-lg shadow-[0_0_20px_rgba(152,255,217,0.4)] mr-2 mb-2 animate-pulse">Observation and pattern recognition</span>
-                    <span class="text-zinc-300">— you use both every single day. On markets, on people, on organisations. You spot inefficiencies in systems others can't see. You read rooms. You connect dots before anyone else has drawn the first line.</span>
-                    
+
+                <div
+                    class="relative text-lg leading-relaxed text-zinc-300 mt-6 bg-zinc-900/30 p-8 pb-14 rounded-3xl border border-white/5">
+                    <span
+                        class="inline-block px-4 py-2 bg-mint/10 border border-mint/50 text-mint font-bold rounded-lg shadow-[0_0_20px_rgba(152,255,217,0.4)] mr-2 mb-2 animate-pulse">Observation
+                        and pattern recognition</span>
+                    <span class="text-zinc-300">— you use both every single day. On markets, on people, on
+                        organisations. You spot inefficiencies in systems others can't see. You read rooms. You connect
+                        dots before anyone else has drawn the first line.</span>
+
                     <div class="absolute bottom-4 right-6 flex items-center gap-1.5 text-[11px] text-zinc-500 italic">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg> 
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
                         Hölzel et al. (2011) — Metacognitive regulation & neural change
                     </div>
                 </div>
 
                 <div class="mt-12 pl-6 border-l-2 border-zinc-700 space-y-4">
                     <p class="text-zinc-300 leading-relaxed text-xl">
-                        The only thing that might be missing is the understanding of your own system — <span class="text-white font-medium">how it's wired, what fires it, what it costs</span> — and how to turn the skills you already have onto the architecture running everything else.
+                        The only thing that might be missing is the understanding of your own system — <span
+                            class="text-white font-medium">how it's wired, what fires it, what it costs</span> — and how
+                        to turn the skills you already have onto the architecture running everything else.
                     </p>
                     <p class="text-zinc-500 text-lg font-medium">That's the gap.</p>
                 </div>
@@ -1118,24 +1618,32 @@
 
         <!-- The Final Section -->
         <section id="contact" class="text-center py-32 border-t border-white/5">
-            <h2 class="text-4xl md:text-6xl font-black leading-tight mb-12">One Question Before<br/><span class="text-mint">You Close This</span></h2>
-            
+            <h2 class="text-4xl md:text-6xl font-black leading-tight mb-12">One Question Before<br /><span
+                    class="text-mint">You Close This</span></h2>
+
             <div class="max-w-3xl mx-auto space-y-10 text-lg">
                 <p class="text-zinc-300 leading-relaxed">
-                    You've just read the mechanism. You know the equation. You know the zones. You know what protection mode looks like and what it costs.
+                    You've just read the mechanism. You know the equation. You know the zones. You know what protection
+                    mode looks like and what it costs.
                 </p>
-                
-                <div class="p-8 md:p-10 bg-zinc-900/40 rounded-[32px] border border-white/5 space-y-8 relative overflow-hidden text-left">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mint/30 to-transparent"></div>
-                    
+
+                <div
+                    class="p-8 md:p-10 bg-zinc-900/40 rounded-[32px] border border-white/5 space-y-8 relative overflow-hidden text-left">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mint/30 to-transparent">
+                    </div>
+
                     <div>
                         <p class="text-white font-bold text-xl mb-2">But here's what this document can't tell you:</p>
-                        <p class="text-zinc-400">Where exactly your system is leaking and how exactly it's affecting your decisions and thinking process.</p>
+                        <p class="text-zinc-400">Where exactly your system is leaking and how exactly it's affecting
+                            your decisions and thinking process.</p>
                     </div>
-                    
+
                     <div class="p-6 border-l-2 border-zinc-700 bg-black/20 rounded-r-2xl">
                         <p class="text-zinc-300 italic leading-relaxed">
-                            "You can map it alone. I did. It took five months at rock bottom to see what I can show someone else in one conversation. <span class="text-white font-medium">That's the only difference. Not capability. Time and cost.</span>"
+                            "You can map it alone. I did. It took five months at rock bottom to see what I can show
+                            someone else in one conversation. <span class="text-white font-medium">That's the only
+                                difference. Not capability. Time and cost.</span>"
                         </p>
                     </div>
 
@@ -1143,49 +1651,82 @@
                         <p class="text-white font-bold mb-6 text-lg">In one conversation, we will:</p>
                         <ul class="space-y-5">
                             <li class="flex items-start gap-4">
-                                <div class="mt-1 w-6 h-6 rounded-full bg-mint/10 flex items-center justify-center shrink-0 border border-mint/30">
-                                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <div
+                                    class="mt-1 w-6 h-6 rounded-full bg-mint/10 flex items-center justify-center shrink-0 border border-mint/30">
+                                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
                                 </div>
                                 <span class="text-zinc-300">Map your specific triggers.</span>
                             </li>
                             <li class="flex items-start gap-4">
-                                <div class="mt-1 w-6 h-6 rounded-full bg-mint/10 flex items-center justify-center shrink-0 border border-mint/30">
-                                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <div
+                                    class="mt-1 w-6 h-6 rounded-full bg-mint/10 flex items-center justify-center shrink-0 border border-mint/30">
+                                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
                                 </div>
-                                <span class="text-zinc-300">Identify which zone you're spending most of your time in.</span>
+                                <span class="text-zinc-300">Identify which zone you're spending most of your time
+                                    in.</span>
                             </li>
                             <li class="flex items-start gap-4">
-                                <div class="mt-1 w-6 h-6 rounded-full bg-mint/10 flex items-center justify-center shrink-0 border border-mint/30">
-                                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <div
+                                    class="mt-1 w-6 h-6 rounded-full bg-mint/10 flex items-center justify-center shrink-0 border border-mint/30">
+                                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
                                 </div>
                                 <span class="text-zinc-300">Pinpoint exactly where the bandwidth is leaking.</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="pt-8 space-y-6">
-                    <p class="text-mint font-black tracking-[0.2em] uppercase text-lg md:text-xl drop-shadow-[0_0_15px_rgba(152,255,217,0.4)]">Your Data. Your System. Your Map.</p>
-                    <p class="text-zinc-400 text-sm md:text-base">If what you read today felt accurate, this is the next step.</p>
+                    <p
+                        class="text-mint font-black tracking-[0.2em] uppercase text-lg md:text-xl drop-shadow-[0_0_15px_rgba(152,255,217,0.4)]">
+                        Your Data. Your System. Your Map.</p>
+                    <p class="text-zinc-400 text-sm md:text-base">If what you read today felt accurate, this is the next
+                        step.</p>
                 </div>
             </div>
-            
+
             <div class="flex flex-col items-center gap-6 pt-12">
-                <button data-cal-link="aankitm/15mins" data-cal-namespace="15mins" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' class="btn-primary px-16 py-6 rounded-full text-lg uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_30px_rgba(152,255,217,0.5)] transition-all">Book a Call</button>
+                <button data-cal-link="aankitm/15mins" data-cal-namespace="15mins"
+                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                    class="btn-primary px-16 py-6 rounded-full text-lg uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_30px_rgba(152,255,217,0.5)] transition-all">Book
+                    a Call</button>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="max-w-4xl mx-auto px-6 py-20 border-t border-white/5 flex flex-col items-center justify-center gap-8">
+    <footer
+        class="max-w-4xl mx-auto px-6 py-20 border-t border-white/5 flex flex-col items-center justify-center gap-8">
         <div class="flex flex-col items-center gap-4">
-            <div class="w-24 h-24 rounded-full border border-mint/20 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md">
-                <img src="/assets/logo-small.svg" alt="logo" class="w-12 h-12 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.6)]">
-            </div>
+            <a href="./" class="no-underline">
+                <div
+                    class="w-24 h-24 rounded-full border border-mint/20 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md">
+                    <img src="./assets/logo-small.svg" alt="Limitless Potentia logo"
+                        class="w-12 h-12 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.6)]">
+                </div>
+            </a>
             <div class="flex flex-col text-center text-mint">
                 <span class="font-black tracking-[0.2em] text-sm leading-none">LIMITLESS</span>
                 <span class="font-medium tracking-[0.2em] text-[10px] leading-none mt-1">POTENTIA</span>
             </div>
+        </div>
+        <div class="flex items-center gap-6 text-zinc-600 text-xs uppercase tracking-widest font-bold">
+            <a href="./" class="hover:text-zinc-400 transition-colors no-underline text-zinc-600">Home</a>
+            <span class="text-zinc-800">•</span>
+            <a href="./cost-of-handling-pressure.html"
+                class="hover:text-zinc-400 transition-colors no-underline text-mint">The Mechanism</a>
         </div>
     </footer>
 
@@ -1213,12 +1754,12 @@
         let currentZoneIndex = 0;
         const totalZones = 3;
 
-        window.updateZones = function(index, scrollToTarget = true) {
+        window.updateZones = function (index, scrollToTarget = true) {
             currentZoneIndex = index;
             const cards = document.querySelectorAll('.zone-card');
             const dots = document.querySelectorAll('.regulator-dot');
-            
-            if(cards.length === 0) return;
+
+            if (cards.length === 0) return;
 
             cards.forEach((card, i) => {
                 let state = '';
@@ -1254,10 +1795,10 @@
             if (currentScroll >= 0 && currentScroll <= scrollDistance) {
                 let progress = currentScroll / scrollDistance; // 0.0 to 1.0
                 let newIndex = 0;
-                
+
                 if (progress > 0.66) newIndex = 2;
                 else if (progress > 0.33) newIndex = 1;
-                
+
                 if (currentZoneIndex !== newIndex) {
                     updateZones(newIndex, false);
                 }
@@ -1270,15 +1811,15 @@
 
         // Initialize Carousel
         document.addEventListener('DOMContentLoaded', () => {
-             updateZones(0, false);
+            updateZones(0, false);
         });
 
         // Interactive Steps Logic
-        window.toggleStep = function(stepId) {
+        window.toggleStep = function (stepId) {
             const content = document.getElementById(`${stepId}-content`);
             const chevron = document.getElementById(`${stepId}-chevron`);
             const badge = document.getElementById(`${stepId}-badge`);
-            
+
             if (content.classList.contains('expanded')) {
                 content.classList.remove('expanded');
                 chevron.classList.remove('rotate-180');
@@ -1298,9 +1839,9 @@
 
         // Crossfade Card Logic
         let isThoughts = false;
-        window.toggleDistinction = function() {
+        window.toggleDistinction = function () {
             isThoughts = !isThoughts;
-            
+
             const container = document.getElementById('distinction-container');
             const label = document.getElementById('distinction-label');
             const counter = document.getElementById('distinction-counter');
@@ -1316,17 +1857,17 @@
                 container.classList.replace('shadow-[0_0_30px_rgba(152,255,217,0.05)]', 'shadow-[0_0_30px_rgba(255,77,77,0.05)]');
                 label.classList.replace('text-mint', 'text-red-500');
                 counter.innerText = '2 / 2';
-                
+
                 contentThinking.classList.replace('opacity-100', 'opacity-0');
                 contentThinking.classList.add('pointer-events-none');
-                
+
                 contentThoughts.classList.replace('opacity-0', 'opacity-100');
                 contentThoughts.classList.remove('pointer-events-none');
-                
+
                 toggleLabel.innerText = 'Flip to Thinking';
                 toggleBg.classList.replace('bg-zinc-800', 'bg-red-500/20');
                 toggleBg.classList.replace('ring-white/10', 'ring-red-500/30');
-                
+
                 toggleThumb.classList.replace('translate-x-0', 'translate-x-7');
                 toggleThumb.classList.replace('bg-mint', 'bg-red-500');
                 toggleThumb.classList.replace('shadow-[0_0_8px_rgba(152,255,217,0.8)]', 'shadow-[0_0_8px_rgba(255,77,77,0.8)]');
@@ -1336,17 +1877,17 @@
                 container.classList.replace('shadow-[0_0_30px_rgba(255,77,77,0.05)]', 'shadow-[0_0_30px_rgba(152,255,217,0.05)]');
                 label.classList.replace('text-red-500', 'text-mint');
                 counter.innerText = '1 / 2';
-                
+
                 contentThoughts.classList.replace('opacity-100', 'opacity-0');
                 contentThoughts.classList.add('pointer-events-none');
-                
+
                 contentThinking.classList.replace('opacity-0', 'opacity-100');
                 contentThinking.classList.remove('pointer-events-none');
-                
+
                 toggleLabel.innerText = 'Flip to Thoughts';
                 toggleBg.classList.replace('bg-red-500/20', 'bg-zinc-800');
                 toggleBg.classList.replace('ring-red-500/30', 'ring-white/10');
-                
+
                 toggleThumb.classList.replace('translate-x-7', 'translate-x-0');
                 toggleThumb.classList.replace('bg-red-500', 'bg-mint');
                 toggleThumb.classList.replace('shadow-[0_0_8px_rgba(255,77,77,0.8)]', 'shadow-[0_0_8px_rgba(152,255,217,0.8)]');
@@ -1354,28 +1895,28 @@
         };
 
         // Interactive Compound Cost Logic
-        window.revealCompoundCost = function(leader) {
+        window.revealCompoundCost = function (leader) {
             const resultA = document.getElementById('compound-result-a');
             const resultB = document.getElementById('compound-result-b');
             const btnA = document.getElementById('btn-leader-a');
             const btnB = document.getElementById('btn-leader-b');
-            
+
             // Reset borders/backgrounds
             btnA.classList.remove('border-mint', 'bg-mint/10');
             btnB.classList.remove('border-red-500', 'bg-red-500/10');
-            
+
             if (leader === 'A') {
                 btnA.classList.add('border-mint', 'bg-mint/10');
                 btnA.classList.remove('border-transparent');
                 btnB.classList.add('border-transparent');
-                
+
                 resultA.classList.remove('hidden');
                 resultB.classList.add('hidden');
-                
+
                 setTimeout(() => {
                     resultB.classList.add('opacity-0', 'translate-y-8');
                     resultB.classList.remove('opacity-100', 'translate-y-0');
-                    
+
                     resultA.classList.remove('opacity-0', 'translate-y-8');
                     resultA.classList.add('opacity-100', 'translate-y-0');
                     resultA.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -1385,10 +1926,10 @@
                 btnB.classList.add('border-red-500', 'bg-red-500/10');
                 btnB.classList.remove('border-transparent');
                 btnA.classList.add('border-transparent');
-                
+
                 resultB.classList.remove('hidden');
                 resultA.classList.add('hidden');
-                
+
                 setTimeout(() => {
                     resultA.classList.add('opacity-0', 'translate-y-8');
                     resultA.classList.remove('opacity-100', 'translate-y-0');
@@ -1403,17 +1944,18 @@
 
     <!-- Cal element-click embed code begins -->
     <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "15mins", {origin:"https://app.cal.com"});
-    
-      
-      // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-      // `data-cal-link="aankitm/15mins"`
-      // data-cal-namespace="15mins"
-      // `data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'`
-    
-      Cal.ns["15mins"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#98FFD9"},"dark":{"cal-brand":"#75edc1"}},"hideEventTypeDetails":false,"layout":"month_view"});
-      </script>
-      <!-- Cal element-click embed code ends -->
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "15mins", { origin: "https://app.cal.com" });
+
+
+        // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+        // `data-cal-link="aankitm/15mins"`
+        // data-cal-namespace="15mins"
+        // `data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'`
+
+        Cal.ns["15mins"]("ui", { "cssVarsPerTheme": { "light": { "cal-brand": "#98FFD9" }, "dark": { "cal-brand": "#75edc1" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+    </script>
+    <!-- Cal element-click embed code ends -->
 </body>
+
 </html>
